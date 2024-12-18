@@ -19,11 +19,11 @@ jobs:
           npm run build
 
       - name: 📂 Sync files
-        uses: Dylan700/sftp-upload-action@latest
+        uses: appleboy/scp-action@v0.2.2
         with:
-          server: ssh.strato.de
-          username: ${{ secrets.STRATO_SFTP_USER }}
-          password: ${{ secrets.STRATO_SFTP_PWD }}
+          host: ssh.strato.de
           port: 22
-          uploads: |
-          ./build => ./
+          username: ${{ secrets.STRATO_SFTP_USER }}
+          key: ${{ secrets.STRATO_SFTP_PWD }}
+          source: ./build/
+          target: /var/www/html
