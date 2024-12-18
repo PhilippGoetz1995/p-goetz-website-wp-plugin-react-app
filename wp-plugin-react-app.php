@@ -9,7 +9,7 @@
 * Description:     Wp-Plugin-React-App
 * Author:          Philipp Goetz
 * Author URL:      https://weshuber.com
-* Version:         0.10
+* Version:         0.11
 */
 
 
