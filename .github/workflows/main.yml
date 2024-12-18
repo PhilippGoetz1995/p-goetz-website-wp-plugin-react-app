@@ -18,11 +18,17 @@ jobs:
           npm install
           npm run build
 
+      - name: 📁 Package the Deployment package (React App & wp-plugin php file)
+        run: |
+          mkdir -p deploy
+          cp -r build deploy
+          cp wp-plugin-react-app.php deploy/
+
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.strato.de
           username: ${{ secrets.STRATO_SFTP_USER }}
           password: ${{ secrets.STRATO_SFTP_PWD }}
-          local-dir: build/ # The directory to upload
+          local-dir: deploy/ # The directory to upload
           server-dir: /react/ # Adjust this path to match your FTP directory
