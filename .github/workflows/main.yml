@@ -26,4 +26,4 @@ jobs:
           password: ${{ secrets.STRATO_SFTP_PWD }}
           port: 22
           uploads: |
-          ./ => ./
+          ./ => ./www
