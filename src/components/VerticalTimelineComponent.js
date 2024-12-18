@@ -67,7 +67,11 @@ export default function VerticalTimelineComponent() {
               Creative Direction, User Experience, Visual Design, Project
               Management, Team Leading
             </p>
-            <img src="../media/2.png" style={{ width: "100%" }}></img>
+            <img
+              src="../media/2.png"
+              style={{ width: "100%" }}
+              alt="Test"
+            ></img>
             <ImageGallery items={images} />
           </VerticalTimelineElement>
 
@@ -104,7 +108,7 @@ export default function VerticalTimelineComponent() {
               background: "rgb(33, 150, 243)",
               color: "#fff",
             }}
-            icon=" <img src='../media/2.png' style={{ width: '100%' }}></img>"
+            icon=""
           >
             <h3 className="vertical-timeline-element-title">Web Designer</h3>
             <h4 className="vertical-timeline-element-subtitle">
