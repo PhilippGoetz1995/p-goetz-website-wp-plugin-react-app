@@ -25,4 +25,4 @@ jobs:
           username: ${{ secrets.STRATO_SFTP_USER }}
           password: ${{ secrets.STRATO_SFTP_PWD }}
           local-dir: build/ # The directory to upload
-          server-dir: / # Adjust this path to match your FTP directory
+          server-dir: /react/ # Adjust this path to match your FTP directory
