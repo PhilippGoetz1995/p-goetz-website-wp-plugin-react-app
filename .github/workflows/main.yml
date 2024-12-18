@@ -19,10 +19,11 @@ jobs:
           npm run build
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: Dylan700/sftp-upload-action@latest
         with:
           server: ssh.strato.de
           username: ${{ secrets.STRATO_SFTP_USER }}
           password: ${{ secrets.STRATO_SFTP_PWD }}
-          protocol: ftps
           port: 22
+          uploads: |
+          ./ => ./
