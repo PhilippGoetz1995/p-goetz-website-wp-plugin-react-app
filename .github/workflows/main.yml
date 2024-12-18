@@ -31,4 +31,4 @@ jobs:
           username: ${{ secrets.STRATO_SFTP_USER }}
           password: ${{ secrets.STRATO_SFTP_PWD }}
           local-dir: deploy/ # The directory to upload
-          server-dir: /STRATO-apps/wordpress_02/app/wp-content/plugins/wp-plugin-react-app/ # Adjust this path to match your FTP directory-
+          server-dir: ${{ secrets.STRATO_SFTP_PATH }} # Adjust this path to match your FTP directory-
