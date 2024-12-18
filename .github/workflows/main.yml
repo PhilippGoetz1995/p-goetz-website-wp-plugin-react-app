@@ -19,7 +19,7 @@ jobs:
           npm run build
 
       - name: 📂 Sync files
-        uses: appleboy/scp-action@v0.2.2
+        uses: appleboy/scp-action@v0.1.7
         with:
           host: ssh.strato.de
           port: 22
