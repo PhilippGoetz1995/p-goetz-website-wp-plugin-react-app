@@ -23,6 +23,6 @@ jobs:
         with:
           server: ftp.strato.de
           username: ${{ secrets.STRATO_SFTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          password: ${{ secrets.STRATO_SFTP_PWD }}
           local-dir: build # The directory to upload
           server-dir: / # Adjust this path to match your FTP directory
