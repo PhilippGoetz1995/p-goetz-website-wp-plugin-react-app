@@ -19,11 +19,10 @@ jobs:
           npm run build
 
       - name: 📂 Sync files
-        uses: appleboy/scp-action@v0.1.7
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
-          host: ssh.strato.de
-          port: 22
+          server: ftp.strato.de
           username: ${{ secrets.STRATO_SFTP_USER }}
-          key: ${{ secrets.STRATO_SFTP_PWD }}
-          source: ./build/
-          target: /var/www/html
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: build # The directory to upload
+          server-dir: / # Adjust this path to match your FTP directory
