@@ -5,11 +5,11 @@
 * @package Wp-Plugin-React-App
 * @wordpress-plugin
 *
-* Plugin Name:     Wp-Plugin-React-App
-* Description:     Wp-Plugin-React-App
+* Plugin Name:     WP-Plugin-React-App
+* Description:     React App Integration via Shortcode
 * Author:          Philipp Goetz
-* Author URL:      https://weshuber.com
-* Version:         0.11
+* Author URL:      https://p-goetz.de
+* Version:         0.12
 */
 
 
