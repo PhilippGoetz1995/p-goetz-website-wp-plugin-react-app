@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+/* Individual Styling for Vertical Timeline */
+
+.vertical-timeline {
+  max-width: 1700px !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image-gallery-thumbnail {
+  width: 133.33px !important;
+  height: 75px !important;
+  aspect-ratio: 16 / 9; /* Ensure 16:9 aspect ratio */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* .image-gallery-thumbnail {
+  width: 125px !important;
+  height: 70.3125px !important;
+} */
+
+.image-gallery-thumbnail img {
+  object-fit: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Adjust this ratio to match the video aspect ratio */
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

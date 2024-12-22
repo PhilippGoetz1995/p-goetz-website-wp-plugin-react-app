@@ -1,5 +1,7 @@
 import { Bs0Circle } from "react-icons/bs";
 
+import { useState, useRef } from "react";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -10,18 +12,79 @@ import "react-vertical-timeline-component/style.min.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ImageGallery from "react-image-gallery";
 
-const images = [
-  {
-    original: "../media/redbull_logo.png",
-    thumbnail: "../media/redbull_logo.png",
-  },
-  {
-    original: "../media/redbull_logo.png",
-    thumbnail: "../media/redbull_logo.png",
-  },
-];
-
 export default function VerticalTimelineComponent() {
+  const renderVideo = (item) => {
+    return (
+      <div className="video-wrapper">
+        <iframe
+          width="100%"
+          height="100%"
+          src={item.embedUrl}
+          allowFullScreen
+          title="ex"
+        />
+      </div>
+    );
+  };
+
+  // Show and hide the Fullscreen Button for the gallery => Video Section
+  const handleSlideChange = (index) => {
+    var slideName = images[index].name; // Get the name of the current slide
+    var element = document.querySelector(".image-gallery-fullscreen-button");
+    if (slideName == "VideoSlide") {
+      if (element) {
+        element.style.display = "none";
+      }
+    } else {
+      if (element) {
+        element.style.display = "block";
+      }
+    }
+  };
+
+  const images = [
+    {
+      original:
+        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-nAL-oSEW/w:auto/h:auto/q:auto/id:daf453a9a08c2ec7ab324d9f2cbe0fab/https://p-goetz.de/BMW_MMR_1.jpg",
+      thumbnail:
+        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-nAL-oSEW/w:auto/h:auto/q:auto/id:daf453a9a08c2ec7ab324d9f2cbe0fab/https://p-goetz.de/BMW_MMR_1.jpg",
+    },
+    {
+      embedUrl:
+        "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video1.mp4",
+      original:
+        "https://mla8wgg4cper.i.optimole.com/co-ZpyQ-KOgCu6df/w:auto/h:auto/q:auto/id:2adbe1b1af04507831c09d16e38fc92c/directUpload/BMW_MMR_Video_Thumbnail.png",
+      thumbnail:
+        "https://mla8wgg4cper.i.optimole.com/co-ZpyQ-KOgCu6df/w:auto/h:auto/q:auto/id:2adbe1b1af04507831c09d16e38fc92c/directUpload/BMW_MMR_Video_Thumbnail.png",
+      renderItem: renderVideo.bind(this),
+      name: "VideoSlide",
+    },
+    {
+      original:
+        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-Z_bm9VIr/w:auto/h:auto/q:auto/id:436316c6c9829c0b4da53115f54d4c92/https://p-goetz.de/BMW_MMR_2.jpg",
+      thumbnail:
+        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-Z_bm9VIr/w:auto/h:auto/q:auto/id:436316c6c9829c0b4da53115f54d4c92/https://p-goetz.de/BMW_MMR_2.jpg",
+    },
+    {
+      original:
+        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-Jkkjkz9p/w:auto/h:auto/q:auto/id:19189ba1d3cf9b1645b0748eafccba1c/https://p-goetz.de/BMW_MMR_3.jpg",
+      thumbnail:
+        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-Jkkjkz9p/w:auto/h:auto/q:auto/id:19189ba1d3cf9b1645b0748eafccba1c/https://p-goetz.de/BMW_MMR_3.jpg",
+    },
+    {
+      original:
+        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-6EY8h-cM/w:auto/h:auto/q:auto/id:138db4e9ba37493992d97cd2f427c694/https://p-goetz.de/BMW_MMR_4.jpg",
+      thumbnail:
+        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-6EY8h-cM/w:auto/h:auto/q:auto/id:138db4e9ba37493992d97cd2f427c694/https://p-goetz.de/BMW_MMR_4.jpg",
+    },
+    {
+      original:
+        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-6EY8h-cM/w:auto/h:auto/q:auto/id:138db4e9ba37493992d97cd2f427c694/https://p-goetz.de/BMW_MMR_4.jpg",
+      thumbnail:
+        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-6EY8h-cM/w:auto/h:auto/q:auto/id:138db4e9ba37493992d97cd2f427c694/https://p-goetz.de/BMW_MMR_4.jpg",
+    },
+  ];
+
   return (
     <>
       <div
@@ -36,8 +99,8 @@ export default function VerticalTimelineComponent() {
             }}
             className="vertical-timeline-element--work"
             contentStyle={{
-              background: "rgb(33, 150, 243)",
-              color: "#fff",
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
             }}
             contentArrowStyle={{
               borderRight: "7px solid  rgb(33, 150, 243)",
@@ -49,8 +112,9 @@ export default function VerticalTimelineComponent() {
             }}
             icon={<Bs0Circle />}
           >
+            {/* Logo in top right Corner */}
             <img
-              src="../media/redbull_logo.png"
+              src="https://mla8wgg4cper.i.optimole.com/AjjxPCk-vuDi2bHE/w:auto/h:auto/q:auto/id:e188739792c80ef545ebff1f35e6ce76/https://p-goetz.de/BMW_MMR_Logo.png"
               style={{
                 width: "100px",
                 right: "15px",
@@ -58,21 +122,27 @@ export default function VerticalTimelineComponent() {
               }}
               alt="Test"
             ></img>
+
+            {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
-              Creative Director
+              BMW M Mixed Reality
             </h3>
 
-            <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+            <h4 className="vertical-timeline-element-subtitle">
+              Instructor Side Job@BMW M, Munich
+            </h4>
             <p>
-              Creative Direction, User Experience, Visual Design, Project
-              Management, Team Leading
+              Developed together with BMW M the first Mixed Reality Experience
+              for Driving Experience Customers.
             </p>
-            <img
-              src="../media/2.png"
-              style={{ width: "100%" }}
-              alt="Test"
-            ></img>
-            <ImageGallery items={images} />
+
+            {/* Gallery */}
+            <ImageGallery
+              items={images}
+              showVideo={renderVideo}
+              showPlayButton={false}
+              onBeforeSlide={handleSlideChange}
+            />
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
