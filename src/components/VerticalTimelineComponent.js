@@ -49,7 +49,7 @@ export default function VerticalTimelineComponent() {
     },
     {
       embedUrl:
-        "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video1.mp4",
+        "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video1.mp4",
       original:
         "https://mla8wgg4cper.i.optimole.com/co-ZpyQ-KOgCu6df/w:auto/h:auto/q:auto/id:2adbe1b1af04507831c09d16e38fc92c/directUpload/BMW_MMR_Video_Thumbnail.png",
       thumbnail:

@@ -45,6 +45,8 @@ function react_app_shortcode_with_script() {
                     );
                 }
 
+                echo "Test";
+
                 if (str_ends_with($file, '.css')) {
                     wp_enqueue_style(
                         'react-app-style', 

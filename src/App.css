@@ -1,5 +1,4 @@
 /* Individual Styling for Vertical Timeline */
-
 .vertical-timeline {
   max-width: 1700px !important;
 }
@@ -9,11 +8,6 @@
   height: 75px !important;
   aspect-ratio: 16 / 9; /* Ensure 16:9 aspect ratio */
 }
-
-/* .image-gallery-thumbnail {
-  width: 125px !important;
-  height: 70.3125px !important;
-} */
 
 .image-gallery-thumbnail img {
   object-fit: cover;
