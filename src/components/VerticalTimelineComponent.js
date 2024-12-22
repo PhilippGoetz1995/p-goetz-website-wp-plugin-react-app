@@ -31,7 +31,7 @@ export default function VerticalTimelineComponent() {
   const handleSlideChange = (index) => {
     var slideName = images[index].name; // Get the name of the current slide
     var element = document.querySelector(".image-gallery-fullscreen-button");
-    if (slideName == "VideoSlide") {
+    if (slideName === "VideoSlide") {
       if (element) {
         element.style.display = "none";
       }
