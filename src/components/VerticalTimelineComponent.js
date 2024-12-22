@@ -1,7 +1,5 @@
 import { Bs0Circle } from "react-icons/bs";
 
-import { useState, useRef } from "react";
-
 import {
   VerticalTimeline,
   VerticalTimelineElement,

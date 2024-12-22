@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import VerticalTimelineComponent from "./components/VerticalTimelineComponent";
 
