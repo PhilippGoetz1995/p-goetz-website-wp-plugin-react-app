@@ -3,16 +3,37 @@
   max-width: 1700px !important;
 }
 
-.image-gallery-thumbnail {
-  width: 133.33px !important;
-  height: 75px !important;
-  aspect-ratio: 16 / 9; /* Ensure 16:9 aspect ratio */
+.vertical-timeline-element-date {
+  color: white !important;
 }
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-content {
+    width: 46% !important;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns
+    .vertical-timeline-element:nth-child(even)
+    .vertical-timeline-element-content
+    .vertical-timeline-element-date {
+    right: 115% !important;
+  }
+
+  .vertical-timeline--two-columns
+    .vertical-timeline-element:nth-child(odd)
+    .vertical-timeline-element-content
+    .vertical-timeline-element-date {
+    left: 115% !important;
+  }
+}
+
+/* Styling for gallery in Vertical Timeline */
 
 .image-gallery-thumbnail img {
   object-fit: cover;
-  width: 133.33px !important;
-  height: 75px !important;
+  height: 56.25px !important;
 }
 
 .video-wrapper {

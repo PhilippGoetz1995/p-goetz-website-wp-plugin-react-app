@@ -27,59 +27,78 @@ export default function VerticalTimelineComponent() {
 
   // Show and hide the Fullscreen Button for the gallery => Video Section
   const handleSlideChange = (index) => {
-    var slideName = images[index].name; // Get the name of the current slide
-    var element = document.querySelector(".image-gallery-fullscreen-button");
-    if (slideName === "VideoSlide") {
-      if (element) {
-        element.style.display = "none";
-      }
+    var fullScreenVideoButton = document.querySelector(
+      ".image-gallery-fullscreen-button"
+    );
+
+    var element = document.querySelector(".image-gallery-slides").children[
+      index
+    ];
+
+    // Check if there is a video wrapper inside
+    var videoboolean = element.querySelector(".video-wrapper");
+
+    if (videoboolean) {
+      fullScreenVideoButton.style.display = "none";
     } else {
-      if (element) {
-        element.style.display = "block";
-      }
+      fullScreenVideoButton.style.display = "block";
     }
   };
 
-  const images = [
+  const gallery_BMW_MMR = [
     {
-      original:
-        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-nAL-oSEW/w:auto/h:auto/q:auto/id:daf453a9a08c2ec7ab324d9f2cbe0fab/https://p-goetz.de/BMW_MMR_1.jpg",
-      thumbnail:
-        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-nAL-oSEW/w:auto/h:auto/q:auto/id:daf453a9a08c2ec7ab324d9f2cbe0fab/https://p-goetz.de/BMW_MMR_1.jpg",
+      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_01.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_01.jpg",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_02.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_02.jpg",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_03.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_03.jpg",
     },
     {
       embedUrl:
         "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video1.mp4",
       original:
-        "https://mla8wgg4cper.i.optimole.com/co-ZpyQ-KOgCu6df/w:auto/h:auto/q:auto/id:2adbe1b1af04507831c09d16e38fc92c/directUpload/BMW_MMR_Video_Thumbnail.png",
+        "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video_Thumbnail_PlayButton.jpg",
       thumbnail:
-        "https://mla8wgg4cper.i.optimole.com/co-ZpyQ-KOgCu6df/w:auto/h:auto/q:auto/id:2adbe1b1af04507831c09d16e38fc92c/directUpload/BMW_MMR_Video_Thumbnail.png",
+        "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video_Thumbnail_PlayButton.jpg",
       renderItem: renderVideo.bind(this),
       name: "VideoSlide",
     },
     {
-      original:
-        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-Z_bm9VIr/w:auto/h:auto/q:auto/id:436316c6c9829c0b4da53115f54d4c92/https://p-goetz.de/BMW_MMR_2.jpg",
-      thumbnail:
-        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-Z_bm9VIr/w:auto/h:auto/q:auto/id:436316c6c9829c0b4da53115f54d4c92/https://p-goetz.de/BMW_MMR_2.jpg",
+      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_04.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_04.jpg",
     },
     {
-      original:
-        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-Jkkjkz9p/w:auto/h:auto/q:auto/id:19189ba1d3cf9b1645b0748eafccba1c/https://p-goetz.de/BMW_MMR_3.jpg",
-      thumbnail:
-        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-Jkkjkz9p/w:auto/h:auto/q:auto/id:19189ba1d3cf9b1645b0748eafccba1c/https://p-goetz.de/BMW_MMR_3.jpg",
+      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_05.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_05.jpg",
     },
     {
-      original:
-        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-6EY8h-cM/w:auto/h:auto/q:auto/id:138db4e9ba37493992d97cd2f427c694/https://p-goetz.de/BMW_MMR_4.jpg",
-      thumbnail:
-        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-6EY8h-cM/w:auto/h:auto/q:auto/id:138db4e9ba37493992d97cd2f427c694/https://p-goetz.de/BMW_MMR_4.jpg",
+      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_06.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_06.jpg",
     },
     {
-      original:
-        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-6EY8h-cM/w:auto/h:auto/q:auto/id:138db4e9ba37493992d97cd2f427c694/https://p-goetz.de/BMW_MMR_4.jpg",
-      thumbnail:
-        "https://mla8wgg4cper.i.optimole.com/AjjxPCk-6EY8h-cM/w:auto/h:auto/q:auto/id:138db4e9ba37493992d97cd2f427c694/https://p-goetz.de/BMW_MMR_4.jpg",
+      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_07.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_07.jpg",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_08.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_08.jpg",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_09.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_09.jpg",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_10.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_10.jpg",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_11.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_11.jpg",
     },
   ];
 
@@ -101,12 +120,12 @@ export default function VerticalTimelineComponent() {
               color: "rgb(0, 0, 0)",
             }}
             contentArrowStyle={{
-              borderRight: "7px solid  rgb(33, 150, 243)",
+              borderRight: "12px solid  rgb(255, 255, 255)",
             }}
-            date="2011 - present"
+            date="04.2023 - present"
             iconStyle={{
-              background: "rgb(33, 150, 243)",
-              color: "#fff",
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
             }}
             icon={<Bs0Circle />}
           >
@@ -116,6 +135,7 @@ export default function VerticalTimelineComponent() {
               style={{
                 width: "100px",
                 right: "15px",
+                top: "15px",
                 position: "absolute",
               }}
               alt="Test"
@@ -127,16 +147,42 @@ export default function VerticalTimelineComponent() {
             </h3>
 
             <h4 className="vertical-timeline-element-subtitle">
-              Instructor Side Job@BMW M, Munich
+              SIDE JOB | Project Manager & Instructor @BMW M, Munich
             </h4>
             <p>
-              Developed together with BMW M the first Mixed Reality Experience
-              for Driving Experience Customers.
+              World's first Mixed Reality application for a real car driving in
+              a virtual world. The goal was to create a unique, engaging
+              experience that bridges the gap between physical and digital
+              environments, offering drivers and enthusiasts a new way to
+              connect with the BMW M4's performance features in both virtual and
+              real-world settings.
             </p>
+            <ul>
+              <li>
+                🎯 <b>Project Management:</b> Development of the world’s first
+                Mixed Reality application for Driving Experience Customers
+                together with BMW M. Successful GoLive of the project in
+                September 2023
+              </li>
+              <li>
+                🏆 <b>Successful GoLive:</b> September 2023 with worldwide
+                communication.
+              </li>
+              <li>
+                🚗 <b>Client Relationship Management:</b> Led communication with
+                BMW, ensuring alignment on project goals and vision while
+                managing expectations and deliverables.
+              </li>
+              <li>
+                🔧 <b>Tech Innovation:</b> Integration of cutting edge hardware
+                and software to create a realistic and engaging virtual
+                environment.
+              </li>
+            </ul>
 
             {/* Gallery */}
             <ImageGallery
-              items={images}
+              items={gallery_BMW_MMR}
               showVideo={renderVideo}
               showPlayButton={false}
               onBeforeSlide={handleSlideChange}
@@ -154,7 +200,7 @@ export default function VerticalTimelineComponent() {
               background: "rgb(33, 150, 243)",
               color: "#fff",
             }}
-            icon=""
+            icon={<Bs0Circle />}
           >
             <h3 className="vertical-timeline-element-title">Art Director</h3>
             <h4 className="vertical-timeline-element-subtitle">
@@ -176,7 +222,7 @@ export default function VerticalTimelineComponent() {
               background: "rgb(33, 150, 243)",
               color: "#fff",
             }}
-            icon=""
+            icon={<Bs0Circle />}
           >
             <h3 className="vertical-timeline-element-title">Web Designer</h3>
             <h4 className="vertical-timeline-element-subtitle">
@@ -195,7 +241,7 @@ export default function VerticalTimelineComponent() {
               background: "rgb(33, 150, 243)",
               color: "#fff",
             }}
-            icon=""
+            icon={<Bs0Circle />}
           >
             <h3 className="vertical-timeline-element-title">Web Designer</h3>
             <h4 className="vertical-timeline-element-subtitle">
@@ -214,7 +260,7 @@ export default function VerticalTimelineComponent() {
               background: "rgb(233, 30, 99)",
               color: "#fff",
             }}
-            icon=""
+            icon={<Bs0Circle />}
           >
             <h3 className="vertical-timeline-element-title">
               Content Marketing for Web, Mobile and Social Media
@@ -256,7 +302,7 @@ export default function VerticalTimelineComponent() {
               background: "rgb(233, 30, 99)",
               color: "#fff",
             }}
-            icon=""
+            icon={<Bs0Circle />}
           >
             <h3 className="vertical-timeline-element-title">
               Bachelor of Science in Interactive Digital Media Visual Imaging
@@ -284,7 +330,7 @@ export default function VerticalTimelineComponent() {
               background: "rgb(16, 204, 82)",
               color: "#fff",
             }}
-            icon=""
+            icon={<Bs0Circle />}
           />
         </VerticalTimeline>
       </div>
