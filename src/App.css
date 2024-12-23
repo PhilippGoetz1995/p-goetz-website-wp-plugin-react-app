@@ -7,6 +7,11 @@
   color: white !important;
 }
 
+.vertical-timeline-element-content p {
+  font-size: 14px !important;
+  font-weight: inherit !important;
+}
+
 @media only screen and (min-width: 1170px) {
   .vertical-timeline--two-columns .vertical-timeline-element-content {
     width: 46% !important;
