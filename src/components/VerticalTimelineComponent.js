@@ -135,7 +135,6 @@ export default function VerticalTimelineComponent() {
               style={{
                 width: "100px",
                 right: "15px",
-                top: "15px",
                 position: "absolute",
               }}
               alt="Test"
@@ -179,6 +178,23 @@ export default function VerticalTimelineComponent() {
                 environment.
               </li>
             </ul>
+            <p>
+              🎯 <b>Project Management:</b> Development of the world’s first
+              Mixed Reality application for Driving Experience Customers
+              together with BMW M. Successful GoLive of the project in September
+              2023
+              <br />
+              🏆 <b>Successful GoLive:</b> September 2023 with worldwide
+              communication.
+              <br />
+              🚗 <b>Client Relationship Management:</b> Led communication with
+              BMW, ensuring alignment on project goals and vision while managing
+              expectations and deliverables.
+              <br />
+              🔧 <b>Tech Innovation:</b> Integration of cutting edge hardware
+              and software to create a realistic and engaging virtual
+              environment.
+            </p>
 
             {/* Gallery */}
             <ImageGallery
