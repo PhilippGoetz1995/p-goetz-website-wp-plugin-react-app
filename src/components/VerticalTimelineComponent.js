@@ -61,107 +61,107 @@ export default function VerticalTimelineComponent() {
 
   const gallery_BMW_MMR = [
     {
-      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_01.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_01.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_01.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_01.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_02.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_02.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_02.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_02.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_03.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_03.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_03.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_03.jpg",
     },
     {
       embedUrl:
         "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video1.mp4",
       original:
-        "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video_Thumbnail_PlayButton.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video_Thumbnail_PlayButton.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video_Thumbnail_PlayButton.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video_Thumbnail_PlayButton.jpg",
       renderItem: renderVideo.bind(this),
       name: "VideoItem",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_04.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_04.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_04.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_04.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_05.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_05.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_05.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_05.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_06.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_06.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_06.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_06.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_07.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_07.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_07.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_07.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_08.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_08.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_08.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_08.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_09.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_09.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_09.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_09.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_10.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_10.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_10.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_10.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_11.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_11.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_11.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_11.jpg",
     },
   ];
 
   const gallery_RBBasement = [
     {
       original:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_01.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_01.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_01.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_01.jpg",
     },
     {
       original:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_02.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_02.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_02.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_02.jpg",
     },
 
     {
       embedUrl:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Video.mp4",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Video.mp4",
       original:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Video_Thubnail.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Video_Thubnail.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Video_Thubnail.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Video_Thubnail.jpg",
       renderItem: renderVideo.bind(this),
     },
     {
       original:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_03.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_03.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_03.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_03.jpg",
     },
     {
       original:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_04.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_04.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_04.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_04.jpg",
     },
     {
       original:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_05.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_05.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_05.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_05.jpg",
     },
     {
       original:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_06.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_06.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_06.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_06.jpg",
     },
   ];
 
@@ -194,7 +194,7 @@ export default function VerticalTimelineComponent() {
           >
             {/* Logo in top right Corner */}
             <img
-              src="http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Logo.png"
+              src="https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Logo.png"
               style={{
                 width: "100px",
                 right: "15px",
@@ -274,7 +274,7 @@ export default function VerticalTimelineComponent() {
           >
             {/* Logo in top right Corner */}
             <img
-              src="http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Logo.png"
+              src="https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Logo.png"
               style={{
                 width: "70px",
                 right: "15px",
