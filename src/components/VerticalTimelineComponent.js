@@ -1,5 +1,7 @@
 import { Bs0Circle } from "react-icons/bs";
 
+import { useState, useRef } from "react";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -26,24 +28,36 @@ export default function VerticalTimelineComponent() {
   };
 
   // Show and hide the Fullscreen Button for the gallery => Video Section
-  const handleSlideChange = (index) => {
-    var fullScreenVideoButton = document.querySelector(
-      ".image-gallery-fullscreen-button"
-    );
+  const handleSlideChange = (galleryRef) => {
+    var currentIndex = galleryRef.current.getCurrentIndex();
+    //setGallery1Index(currentIndex);
 
-    var element = document.querySelector(".image-gallery-slides").children[
-      index
-    ];
+    const newIndex = currentIndex + 1;
+    galleryRef.current.slideToIndex(newIndex);
 
-    // Check if there is a video wrapper inside
-    var videoboolean = element.querySelector(".video-wrapper");
+    var imageGallerySlide =
+      galleryRef.current.imageGallerySlideWrapper.current.querySelector(
+        ".image-gallery-slides"
+      ).children[currentIndex];
 
-    if (videoboolean) {
-      fullScreenVideoButton.style.display = "none";
-    } else {
-      fullScreenVideoButton.style.display = "block";
+    //Execute only if there is a next slide
+    if (imageGallerySlide) {
+      // Check if there is a video wrapper inside
+      var videoBoolean = imageGallerySlide.querySelector(".video-wrapper");
+      var fullScreenButton =
+        galleryRef.current.imageGallerySlideWrapper.current.querySelector(
+          ".image-gallery-fullscreen-button"
+        );
+      if (videoBoolean) {
+        fullScreenButton.style.display = "none";
+      } else {
+        fullScreenButton.style.display = "block";
+      }
     }
   };
+
+  const gallery1Ref = useRef();
+  const gallery2Ref = useRef();
 
   const gallery_BMW_MMR = [
     {
@@ -66,7 +80,7 @@ export default function VerticalTimelineComponent() {
       thumbnail:
         "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video_Thumbnail_PlayButton.jpg",
       renderItem: renderVideo.bind(this),
-      name: "VideoSlide",
+      name: "VideoItem",
     },
     {
       original: "http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_04.jpg",
@@ -102,6 +116,55 @@ export default function VerticalTimelineComponent() {
     },
   ];
 
+  const gallery_RBBasement = [
+    {
+      original:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_01.jpg",
+      thumbnail:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_01.jpg",
+    },
+    {
+      original:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_02.jpg",
+      thumbnail:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_02.jpg",
+    },
+
+    {
+      embedUrl:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Video.mp4",
+      original:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Video_Thubnail.jpg",
+      thumbnail:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Video_Thubnail.jpg",
+      renderItem: renderVideo.bind(this),
+    },
+    {
+      original:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_03.jpg",
+      thumbnail:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_03.jpg",
+    },
+    {
+      original:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_04.jpg",
+      thumbnail:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_04.jpg",
+    },
+    {
+      original:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_05.jpg",
+      thumbnail:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_05.jpg",
+    },
+    {
+      original:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_06.jpg",
+      thumbnail:
+        "http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_06.jpg",
+    },
+  ];
+
   return (
     <>
       <div
@@ -114,7 +177,7 @@ export default function VerticalTimelineComponent() {
               rootMargin: "0px 0px -40px 0px",
               triggerOnce: false,
             }}
-            className="vertical-timeline-element--work"
+            className="vertical-timeline-element--BMW-MMR"
             contentStyle={{
               background: "rgb(255, 255, 255)",
               color: "rgb(0, 0, 0)",
@@ -131,7 +194,7 @@ export default function VerticalTimelineComponent() {
           >
             {/* Logo in top right Corner */}
             <img
-              src="https://mla8wgg4cper.i.optimole.com/AjjxPCk-vuDi2bHE/w:auto/h:auto/q:auto/id:e188739792c80ef545ebff1f35e6ce76/https://p-goetz.de/BMW_MMR_Logo.png"
+              src="http://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Logo.png"
               style={{
                 width: "100px",
                 right: "15px",
@@ -182,9 +245,98 @@ export default function VerticalTimelineComponent() {
             {/* Gallery */}
             <ImageGallery
               items={gallery_BMW_MMR}
+              ref={gallery1Ref}
               showVideo={renderVideo}
               showPlayButton={false}
-              onBeforeSlide={handleSlideChange}
+              onSlide={() => handleSlideChange(gallery1Ref)}
+            />
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            intersectionObserverProps={{
+              rootMargin: "0px 0px -40px 0px",
+              triggerOnce: false,
+            }}
+            className="vertical-timeline-element--RBBasement"
+            contentStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            contentArrowStyle={{
+              borderRight: "12px solid  rgb(255, 255, 255)",
+            }}
+            date="04.2023 - present"
+            iconStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            icon={<Bs0Circle />}
+          >
+            {/* Logo in top right Corner */}
+            <img
+              src="http://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Logo.png"
+              style={{
+                width: "70px",
+                right: "15px",
+                top: "15px",
+                position: "absolute",
+              }}
+              alt="Test"
+            ></img>
+
+            {/* Content Text */}
+            <h3 className="vertical-timeline-element-title">
+              Red Bull Basement - AI Edition
+            </h3>
+            <div class="lableForJob">MAIN JOB</div>
+            <h4 className="vertical-timeline-element-subtitle">
+              Senior Digital Ecosystem Owner @Red Bull Munich
+            </h4>
+            <p>
+              Red Bull Basement is a global initiative designed to empower
+              students to develop innovative ideas and solutions that tackle
+              pressing social, environmental, and technological challenges. It
+              provides a platform for young change-makers to collaborate, refine
+              their ideas, and bring them to life. The program culminates in a
+              global meeting where teams present their concepts to a panel of
+              experts, fostering a culture of innovation and forward-thinking
+              among the next generation of leaders.
+            </p>
+            <ul>
+              <li>
+                🎯 <b>Project Management:</b> Part of the Organizational team
+                for Red Bull Basement, ensuring seamless execution and success
+                of the event.
+              </li>
+              <li>
+                🛠 <b>Workshop Creation:</b> Designed workshops together with
+                Market experts from Microsoft and AMD to inspire and guide
+                participants in developing their innovative ideas.
+              </li>
+              <li>
+                🌟 <b>Onsite Operations:</b> Led communication with BMW,
+                ensuring alignment on project goals and vision while managing
+                expectations and deliverables.
+              </li>
+              <li>
+                🤝 <b>Mentorship:</b> Supported young talents in refining their
+                ideas, providing strategic advice to help turn concepts into
+                actionable solutions.
+              </li>
+              <li>
+                🌍 <b>Global Engagement:</b> Collaborated with a diverse group
+                of innovators from 40 different countries, fostering creativity
+                and impactful idea exchange.
+              </li>
+            </ul>
+
+            {/* Gallery */}
+            <ImageGallery
+              items={gallery_RBBasement}
+              ref={gallery2Ref}
+              onSlide={() => handleSlideChange(gallery2Ref)}
+              showVideo={renderVideo}
+              showPlayButton={false}
             />
           </VerticalTimelineElement>
 
