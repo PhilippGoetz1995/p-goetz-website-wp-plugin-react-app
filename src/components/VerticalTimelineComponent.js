@@ -144,9 +144,9 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               BMW M Mixed Reality
             </h3>
-
+            <label class="lableForJob">SIDE JOB</label>
             <h4 className="vertical-timeline-element-subtitle">
-              SIDE JOB | Project Manager & Instructor @BMW M, Munich
+              SIDE JOB | Project Manager & Instructor @BMW M
             </h4>
             <p>
               World's first Mixed Reality application for a real car driving in
