@@ -35,6 +35,9 @@
 }
 
 .lableForJob {
+  height: 20px;
+  line-height: 13px;
+  margin-top: 4px;
   float: left;
   margin-right: 10px;
   font-family: "Poppins", sans-serif;
@@ -48,13 +51,6 @@
   border-radius: 1.25rem;
   -webkit-border-radius: 1.25rem;
   -moz-border-radius: 1.25rem;
-  padding: 2px 7px;
-  border-style: solid;
-  border-width: 0.125rem;
-  border-color: #2ecc71;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -box-shadow: none;
 }
 
 /* Styling for gallery in Vertical Timeline */
