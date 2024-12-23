@@ -9,7 +9,7 @@
 * Description:     React App Integration via Shortcode
 * Author:          Philipp Goetz
 * Author URL:      https://p-goetz.de
-* Version:         0.12
+* Version:         0.13
 */
 
 
@@ -44,8 +44,6 @@ function react_app_shortcode_with_script() {
                         true
                     );
                 }
-
-                echo "Test";
 
                 if (str_ends_with($file, '.css')) {
                     wp_enqueue_style(
