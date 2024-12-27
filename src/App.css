@@ -35,6 +35,11 @@
   }
 }
 
+.containerLablesForSkills {
+  width: 100%;
+  height: 50px;
+}
+
 .lableForJob {
   height: 20px;
   line-height: 13px;
@@ -48,7 +53,6 @@
   font-style: normal;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #2ecc71;
   border-radius: 1.25rem;
   -webkit-border-radius: 1.25rem;
   -moz-border-radius: 1.25rem;

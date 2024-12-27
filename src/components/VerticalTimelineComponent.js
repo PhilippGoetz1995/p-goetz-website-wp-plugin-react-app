@@ -58,6 +58,60 @@ export default function VerticalTimelineComponent() {
 
   const gallery1Ref = useRef();
   const gallery2Ref = useRef();
+  const gallery3Ref = useRef();
+
+    const gallery_SAPGDP = [
+      {
+        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_01.jpg",
+        thumbnail:
+          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_01.jpg",
+      },
+      {
+        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_02.jpg",
+        thumbnail:
+          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_02.jpg",
+      },
+      {
+        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_03.jpg",
+        thumbnail:
+          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_03.jpg",
+      },
+      {
+        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_04.jpg",
+        thumbnail:
+          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_04.jpg",
+      },
+      {
+        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_05.jpg",
+        thumbnail:
+          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_05.jpg",
+      },
+      {
+        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_06.jpg",
+        thumbnail:
+          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_06.jpg",
+      },
+      {
+        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_07.jpg",
+        thumbnail:
+          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_07.jpg",
+      },
+      {
+        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_08.jpg",
+        thumbnail:
+          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_08.jpg",
+      },
+      {
+        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_09.jpg",
+        thumbnail:
+          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_09.jpg",
+      },
+      {
+        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_10.jpg",
+        thumbnail:
+          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_10.jpg",
+      },
+    ];
 
   const gallery_BMW_MMR = [
     {
@@ -177,6 +231,114 @@ export default function VerticalTimelineComponent() {
               rootMargin: "0px 0px -40px 0px",
               triggerOnce: false,
             }}
+            className="vertical-timeline-element--RBBasement"
+            contentStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            contentArrowStyle={{
+              borderRight: "12px solid  rgb(255, 255, 255)",
+            }}
+            date="07.2022 - present"
+            iconStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            icon={<Bs0Circle />}
+          >
+            {/* Logo in top right Corner */}
+            <img
+              src="http://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+              style={{
+                width: "70px",
+                right: "15px",
+                top: "15px",
+                position: "absolute",
+              }}
+              alt="Test"
+            ></img>
+
+            {/* Content Text */}
+            <h3 className="vertical-timeline-element-title">
+              SAP Garden Digital Ecosystem
+            </h3>
+            <div class="lableForJob" style={{ backgroundColor: "#130f40" }}>
+              MAIN JOB
+            </div>
+            <h4 className="vertical-timeline-element-subtitle">
+              Senior Digital Ecosystem Owner @Red Bull Munich
+            </h4>
+            <p>
+              The SAP Garden Arena is a cutting-edge, multifunctional sports
+              venue located in Munich, Germany. Designed to host a variety of
+              events, including Red Bull Munich ice Hockey, FC Bayern basketball
+              games, and other sport events. The arena combines state-of-the-art
+              architecture with advanced digital technologies.
+            </p>
+            <ul>
+              <li>
+                🚀 <b>End-to-End Digital Fan Journey:</b> Designed and delivered
+                a cohesive fan experience across all digital touchpoints.
+              </li>
+              <li>
+                🤝 <b>Co-Development initiative:</b> Partnered with FC Bayern
+                Basketball and SAP to maximize efficiency and learn from each
+                other.
+              </li>
+              <li>
+                🎨 <b>Scalable Design System:</b> Created a unified core for
+                rapid frontend adaptation across multiple platforms.
+              </li>
+              <li>
+                📊 <b>Data-Driven Insights:</b> Built advanced analytics
+                dashboards for informed decision-making.
+              </li>
+              <li>
+                🔄 <b>CI/CD Automation:</b> Streamlined workflows to support
+                fast and reliable development across multiple brands and
+                touchpoints.
+              </li>
+              <li>
+                🌱 <b>Sustainability Focus:</b> Embedded eco-conscious
+                principles throughout the project lifecycle.
+              </li>
+            </ul>
+
+            <div class="containerLablesForSkills">
+              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+                AGILE WORK
+              </div>
+              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+                LEADERSHIP
+              </div>
+              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+                TEAM MANAGEMENT
+              </div>
+              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+                CO-INNOVATION
+              </div>
+              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+                DATA ANALYTICS
+              </div>
+              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+                CI/CD
+              </div>
+            </div>
+
+            {/* Gallery */}
+            <ImageGallery
+              items={gallery_SAPGDP}
+              ref={gallery3Ref}
+              onSlide={() => handleSlideChange(gallery3Ref)}
+              showPlayButton={false}
+            />
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            intersectionObserverProps={{
+              rootMargin: "0px 0px -40px 0px",
+              triggerOnce: false,
+            }}
             className="vertical-timeline-element--BMW-MMR"
             contentStyle={{
               background: "rgb(255, 255, 255)",
@@ -207,7 +369,9 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               BMW M Mixed Reality
             </h3>
-            <div class="lableForJob">SIDE JOB</div>
+            <div class="lableForJob" style={{ backgroundColor: "#2ecc71" }}>
+              SIDE JOB
+            </div>
             <h4 className="vertical-timeline-element-subtitle">
               Project Manager & Instructor @BMW M
             </h4>
@@ -241,6 +405,18 @@ export default function VerticalTimelineComponent() {
                 environment.
               </li>
             </ul>
+
+            <div class="containerLablesForSkills">
+              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+                MIXED REALITY
+              </div>
+              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+                AUTOMOTIVE
+              </div>
+              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+                AI
+              </div>
+            </div>
 
             {/* Gallery */}
             <ImageGallery
@@ -288,7 +464,9 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               Red Bull Basement - AI Edition
             </h3>
-            <div class="lableForJob">MAIN JOB</div>
+            <div class="lableForJob" style={{ backgroundColor: "#130f40" }}>
+              MAIN JOB
+            </div>
             <h4 className="vertical-timeline-element-subtitle">
               Senior Digital Ecosystem Owner @Red Bull Munich
             </h4>
@@ -340,138 +518,6 @@ export default function VerticalTimelineComponent() {
             />
           </VerticalTimelineElement>
 
-          <VerticalTimelineElement
-            intersectionObserverProps={{
-              rootMargin: "0px 0px -40px 0px",
-              triggerOnce: false,
-            }}
-            className="vertical-timeline-element--work"
-            date="2010 - 2011"
-            iconStyle={{
-              background: "rgb(33, 150, 243)",
-              color: "#fff",
-            }}
-            icon={<Bs0Circle />}
-          >
-            <h3 className="vertical-timeline-element-title">Art Director</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              San Francisco, CA
-            </h4>
-            <p>
-              Creative Direction, User Experience, Visual Design, SEO, Online
-              Marketing
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            intersectionObserverProps={{
-              rootMargin: "0px 0px -40px 0px",
-              triggerOnce: false,
-            }}
-            className="vertical-timeline-element--work"
-            date="2008 - 2010"
-            iconStyle={{
-              background: "rgb(33, 150, 243)",
-              color: "#fff",
-            }}
-            icon={<Bs0Circle />}
-          >
-            <h3 className="vertical-timeline-element-title">Web Designer</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Los Angeles, CA
-            </h4>
-            <p>User Experience, Visual Design</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            intersectionObserverProps={{
-              rootMargin: "0px 0px -40px 0px",
-              triggerOnce: false,
-            }}
-            className="vertical-timeline-element--work"
-            date="2006 - 2008"
-            iconStyle={{
-              background: "rgb(33, 150, 243)",
-              color: "#fff",
-            }}
-            icon={<Bs0Circle />}
-          >
-            <h3 className="vertical-timeline-element-title">Web Designer</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              San Francisco, CA
-            </h4>
-            <p>User Experience, Visual Design</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            intersectionObserverProps={{
-              rootMargin: "0px 0px -40px 0px",
-              triggerOnce: false,
-            }}
-            className="vertical-timeline-element--education"
-            date="April 2013"
-            iconStyle={{
-              background: "rgb(233, 30, 99)",
-              color: "#fff",
-            }}
-            icon={<Bs0Circle />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Content Marketing for Web, Mobile and Social Media
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Online Course
-            </h4>
-            <p>Strategy, Social Media</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            intersectionObserverProps={{
-              rootMargin: "0px 0px -40px 0px",
-              triggerOnce: false,
-            }}
-            className="vertical-timeline-element--education"
-            date="November 2012"
-            iconStyle={{
-              background: "rgb(233, 30, 99)",
-              color: "#fff",
-            }}
-            icon=""
-          >
-            <h3 className="vertical-timeline-element-title">
-              Agile Development Scrum Master
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Certification
-            </h4>
-            <p>Creative Direction, User Experience, Visual Design</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            intersectionObserverProps={{
-              rootMargin: "0px 0px -40px 0px",
-              triggerOnce: false,
-            }}
-            className="vertical-timeline-element--education"
-            date="2002 - 2006"
-            iconStyle={{
-              background: "rgb(233, 30, 99)",
-              color: "#fff",
-            }}
-            icon={<Bs0Circle />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Bachelor of Science in Interactive Digital Media Visual Imaging
-            </h3>
-            <div
-              style={{
-                width: "20px",
-                height: "20px",
-                backgroundColor: "red",
-              }}
-            >
-              TEST
-            </div>
-            <h4 className="vertical-timeline-element-subtitle">
-              Bachelor Degree
-            </h4>
-            <p>Creative Direction, Visual Design</p>
-          </VerticalTimelineElement>
           <VerticalTimelineElement
             intersectionObserverProps={{
               rootMargin: "0px 0px -40px 0px",
