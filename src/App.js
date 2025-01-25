@@ -1,7 +1,7 @@
 import "./App.css";
 import VerticalTimelineComponent from "./components/VerticalTimelineComponent";
 
-import RevolutionSlider from ".components/RevolutionSlider";
+import RevolutionSlider from "./components/RevolutionSlider";
 
 function App() {
   return (

@@ -7,7 +7,9 @@ const RevolutionSlider = ({ shortcode }) => {
     const fetchSlider = async () => {
       try {
         const response = await fetch(
-          `/wp-json/custom/v1/slider?shortcode=${encodeURIComponent(shortcode)}`
+          `https://p-goetz.de/wp-json/custom/v1/slider?shortcode=${encodeURIComponent(
+            shortcode
+          )}`
         );
         const data = await response.text();
         setSliderContent(data);
