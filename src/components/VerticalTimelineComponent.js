@@ -35,13 +35,15 @@ export default function VerticalTimelineComponent() {
   const handleSlideChange = (galleryRef) => {
     var currentIndex = galleryRef.current.getCurrentIndex();
 
-    setLightboxIndex(currentIndex);
+    // TODO Slide of the Lightbox is not aligned with the Gallery
+    //setLightboxIndex1(currentIndex);
 
-    console.log(currentIndex);
+    //console.log(currentIndex);
 
     const newIndex = currentIndex + 1;
     galleryRef.current.slideToIndex(newIndex);
 
+    //Here i get the current slide and if it is a video i insert a video player
     var imageGallerySlide =
       galleryRef.current.imageGallerySlideWrapper.current.querySelector(
         ".image-gallery-slides"
@@ -70,15 +72,16 @@ export default function VerticalTimelineComponent() {
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
 
-  const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [lightboxIndex1, setLightboxIndex1] = useState(0);
+  const [lightboxIndex2, setLightboxIndex2] = useState(0);
 
   const handleCustomFullscreen1 = (index) => {
-    setLightboxIndex(index);
+    setLightboxIndex1(index);
     setIsOpen1(true);
   };
 
   const handleCustomFullscreen2 = (index) => {
-    setLightboxIndex(index);
+    setLightboxIndex2(index);
     setIsOpen2(true);
   };
 
@@ -374,7 +377,7 @@ export default function VerticalTimelineComponent() {
               items={gallery_SAPGDP}
               ref={gallery3Ref}
               onSlide={() => handleSlideChange(gallery3Ref)}
-              onClick={() => handleCustomFullscreen1(lightboxIndex)}
+              onClick={() => handleCustomFullscreen1(lightboxIndex1)}
               showPlayButton={false}
             />
 
@@ -382,8 +385,8 @@ export default function VerticalTimelineComponent() {
               open={isOpen1}
               close={() => setIsOpen1(false)}
               slides={gallery_SAPGDP.map((img) => ({ src: img.original }))}
-              index={lightboxIndex}
-              onIndexChange={setLightboxIndex}
+              index={lightboxIndex1}
+              onIndexChange={setLightboxIndex1}
             />
           </VerticalTimelineElement>
 
@@ -486,15 +489,15 @@ export default function VerticalTimelineComponent() {
               ref={gallery1Ref}
               showVideo={renderVideo}
               showPlayButton={false}
-              onClick={() => handleCustomFullscreen2(lightboxIndex)}
+              onClick={() => handleCustomFullscreen2(lightboxIndex2)}
               onSlide={() => handleSlideChange(gallery1Ref)}
             />
             <Lightbox
               open={isOpen2}
               close={() => setIsOpen2(false)}
               slides={gallery_BMW_MMR.map((img) => ({ src: img.original }))}
-              index={lightboxIndex}
-              onIndexChange={setLightboxIndex}
+              index={lightboxIndex2}
+              onIndexChange={setLightboxIndex2}
             />
           </VerticalTimelineElement>
 
