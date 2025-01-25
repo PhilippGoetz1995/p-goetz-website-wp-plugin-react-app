@@ -15,19 +15,9 @@
 
 function react_app_shortcode_with_script() {
 
-
     // Path to your React build directory => to get the main.[HASH].js filename
     $react_build_dir = plugin_dir_url(__FILE__) . 'build/';
     $manifest_file = $react_build_dir . 'asset-manifest.json';
-
-    // Enqueue the React app script
-    // wp_enqueue_script(
-    //     'react-app',
-    //    plugin_dir_url(__FILE__) . 'build/static/js/main.b682f75f.js', // Update with the correct path
-    //     array(), 
-    //     '1.0', 
-    //     true
-    // );
 
         // Decode the manifest JSON
         $manifest = json_decode(file_get_contents($manifest_file), true);
@@ -57,17 +47,34 @@ function react_app_shortcode_with_script() {
         }
 
 
-    // // Optionally enqueue CSS if your React app uses it
-    // wp_enqueue_style(
-    //     'react-app-style',
-    //     get_template_directory_uri() . '/path-to-build/static/css/main.css', // Update with the correct path
-    //     array(),
-    //     '1.0'
-    // );
-
     // Output the React root element
     return '<div id="react-root"></div>';
 }
 add_shortcode('react_app', 'react_app_shortcode_with_script');
+
+
+// Add a REST API endpoint to fetch Revolution Slider shortcode output
+add_action('rest_api_init', function () {
+    register_rest_route('custom/v1', '/slider', array(
+        'methods' => 'GET',
+        'callback' => function ($request) {
+            $shortcode = $request->get_param('shortcode');
+            if ($shortcode) {
+                return do_shortcode($shortcode);
+            }
+            return new WP_Error('no_shortcode', 'No shortcode provided', array('status' => 400));
+        },
+        'args' => array(
+            'shortcode' => array(
+                'required' => true,
+                'validate_callback' => function ($param) {
+                    return is_string($param);
+                },
+            ),
+        ),
+    ));
+});
+
+
 
 ?>

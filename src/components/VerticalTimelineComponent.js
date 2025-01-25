@@ -462,7 +462,7 @@ export default function VerticalTimelineComponent() {
 
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
-              Red Bull Basement - AI Edition
+              Red Bull Basement - AI Edition - Tokyo, Japan
             </h3>
             <div class="lableForJob" style={{ backgroundColor: "#130f40" }}>
               MAIN JOB
@@ -483,13 +483,7 @@ export default function VerticalTimelineComponent() {
             <ul>
               <li>
                 🎯 <b>Project Management:</b> Part of the Organizational team
-                for Red Bull Basement, ensuring seamless execution and success
-                of the event.
-              </li>
-              <li>
-                🛠 <b>Workshop Creation:</b> Designed workshops together with
-                Market experts from Microsoft and AMD to inspire and guide
-                participants in developing their innovative ideas.
+                for Red Bull Basement.
               </li>
               <li>
                 🌟 <b>Onsite Operations:</b> Led communication with BMW,
