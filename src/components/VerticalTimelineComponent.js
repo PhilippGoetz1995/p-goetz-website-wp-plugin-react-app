@@ -1,12 +1,16 @@
 import { Bs0Circle } from "react-icons/bs";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+
+// Individual Lightbox
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 // CSS for the Gallery
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -30,7 +34,10 @@ export default function VerticalTimelineComponent() {
   // Show and hide the Fullscreen Button for the gallery => Video Section
   const handleSlideChange = (galleryRef) => {
     var currentIndex = galleryRef.current.getCurrentIndex();
-    //setGallery1Index(currentIndex);
+
+    setLightboxIndex(currentIndex);
+
+    console.log(currentIndex);
 
     const newIndex = currentIndex + 1;
     galleryRef.current.slideToIndex(newIndex);
@@ -60,58 +67,77 @@ export default function VerticalTimelineComponent() {
   const gallery2Ref = useRef();
   const gallery3Ref = useRef();
 
-    const gallery_SAPGDP = [
-      {
-        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_01.jpg",
-        thumbnail:
-          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_01.jpg",
-      },
-      {
-        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_02.jpg",
-        thumbnail:
-          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_02.jpg",
-      },
-      {
-        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_03.jpg",
-        thumbnail:
-          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_03.jpg",
-      },
-      {
-        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_04.jpg",
-        thumbnail:
-          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_04.jpg",
-      },
-      {
-        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_05.jpg",
-        thumbnail:
-          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_05.jpg",
-      },
-      {
-        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_06.jpg",
-        thumbnail:
-          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_06.jpg",
-      },
-      {
-        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_07.jpg",
-        thumbnail:
-          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_07.jpg",
-      },
-      {
-        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_08.jpg",
-        thumbnail:
-          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_08.jpg",
-      },
-      {
-        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_09.jpg",
-        thumbnail:
-          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_09.jpg",
-      },
-      {
-        original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_10.jpg",
-        thumbnail:
-          "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_10.jpg",
-      },
-    ];
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const handleCustomFullscreen1 = (index) => {
+    setLightboxIndex(index);
+    setIsOpen1(true);
+  };
+
+  const handleCustomFullscreen2 = (index) => {
+    setLightboxIndex(index);
+    setIsOpen2(true);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+        event.stopPropagation();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  const gallery_SAPGDP = [
+    {
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_01.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_01.jpg",
+    },
+    {
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_02.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_02.jpg",
+    },
+    {
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_03.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_03.jpg",
+    },
+    {
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_04.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_04.jpg",
+    },
+    {
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_05.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_05.jpg",
+    },
+    {
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_06.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_06.jpg",
+    },
+    {
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_07.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_07.jpg",
+    },
+    {
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_08.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_08.jpg",
+    },
+    {
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_09.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_09.jpg",
+    },
+    {
+      original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_10.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_10.jpg",
+    },
+  ];
 
   const gallery_BMW_MMR = [
     {
@@ -262,7 +288,7 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               SAP Garden Digital Ecosystem
             </h3>
-            <div class="lableForJob" style={{ backgroundColor: "#130f40" }}>
+            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
@@ -304,23 +330,41 @@ export default function VerticalTimelineComponent() {
               </li>
             </ul>
 
-            <div class="containerLablesForSkills">
-              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+            <div className="containerLablesForSkills">
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
                 AGILE WORK
               </div>
-              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
                 LEADERSHIP
               </div>
-              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
                 TEAM MANAGEMENT
               </div>
-              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
                 CO-INNOVATION
               </div>
-              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
                 DATA ANALYTICS
               </div>
-              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
                 CI/CD
               </div>
             </div>
@@ -330,7 +374,16 @@ export default function VerticalTimelineComponent() {
               items={gallery_SAPGDP}
               ref={gallery3Ref}
               onSlide={() => handleSlideChange(gallery3Ref)}
+              onClick={() => handleCustomFullscreen1(lightboxIndex)}
               showPlayButton={false}
+            />
+
+            <Lightbox
+              open={isOpen1}
+              close={() => setIsOpen1(false)}
+              slides={gallery_SAPGDP.map((img) => ({ src: img.original }))}
+              index={lightboxIndex}
+              onIndexChange={setLightboxIndex}
             />
           </VerticalTimelineElement>
 
@@ -369,7 +422,7 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               BMW M Mixed Reality
             </h3>
-            <div class="lableForJob" style={{ backgroundColor: "#2ecc71" }}>
+            <div className="lableForJob" style={{ backgroundColor: "#2ecc71" }}>
               SIDE JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
@@ -406,14 +459,23 @@ export default function VerticalTimelineComponent() {
               </li>
             </ul>
 
-            <div class="containerLablesForSkills">
-              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+            <div className="containerLablesForSkills">
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
                 MIXED REALITY
               </div>
-              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
                 AUTOMOTIVE
               </div>
-              <div class="lableForJob" style={{ backgroundColor: "#485460" }}>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
                 AI
               </div>
             </div>
@@ -424,7 +486,15 @@ export default function VerticalTimelineComponent() {
               ref={gallery1Ref}
               showVideo={renderVideo}
               showPlayButton={false}
+              onClick={() => handleCustomFullscreen2(lightboxIndex)}
               onSlide={() => handleSlideChange(gallery1Ref)}
+            />
+            <Lightbox
+              open={isOpen2}
+              close={() => setIsOpen2(false)}
+              slides={gallery_BMW_MMR.map((img) => ({ src: img.original }))}
+              index={lightboxIndex}
+              onIndexChange={setLightboxIndex}
             />
           </VerticalTimelineElement>
 
@@ -464,7 +534,7 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               Red Bull Basement - AI Edition - Tokyo, Japan
             </h3>
-            <div class="lableForJob" style={{ backgroundColor: "#130f40" }}>
+            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">

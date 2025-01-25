@@ -53,28 +53,6 @@ function react_app_shortcode_with_script() {
 add_shortcode('react_app', 'react_app_shortcode_with_script');
 
 
-// Add a REST API endpoint to fetch Revolution Slider shortcode output
-add_action('rest_api_init', function () {
-    register_rest_route('custom/v1', '/slider', array(
-        'methods' => 'GET',
-        'callback' => function ($request) {
-            $shortcode = $request->get_param('shortcode');
-            if ($shortcode) {
-                return do_shortcode($shortcode);
-            }
-            return new WP_Error('no_shortcode', 'No shortcode provided', array('status' => 400));
-        },
-        'args' => array(
-            'shortcode' => array(
-                'required' => true,
-                'validate_callback' => function ($param) {
-                    return is_string($param);
-                },
-            ),
-        ),
-    ));
-});
-
 
 
 ?>

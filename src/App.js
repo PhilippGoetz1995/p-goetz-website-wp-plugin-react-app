@@ -1,14 +1,13 @@
 import "./App.css";
 import VerticalTimelineComponent from "./components/VerticalTimelineComponent";
 
-import RevolutionSlider from "./components/RevolutionSlider";
+import MyImageGallery from "./components/MyImageGallery";
 
 function App() {
   return (
     <div className="App">
+      <MyImageGallery />
       <VerticalTimelineComponent />
-
-      <RevolutionSlider shortcode="[rev_slider alias='option-1']" />
     </div>
   );
 }
