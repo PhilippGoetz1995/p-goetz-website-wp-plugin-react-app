@@ -298,11 +298,13 @@ export default function VerticalTimelineComponent() {
               Senior Digital Ecosystem Owner @Red Bull Munich
             </h4>
             <p>
-              The SAP Garden Arena is a cutting-edge, multifunctional sports
-              venue located in Munich, Germany. Designed to host a variety of
-              events, including Red Bull Munich ice Hockey, FC Bayern basketball
-              games, and other sport events. The arena combines state-of-the-art
-              architecture with advanced digital technologies.
+              As the Senior Digital Ecosystem Owner for the SAP Garden Project,
+              I was responsible for shaping the digital fan experience of this
+              cutting-edge, multifunctional sports venue in Munich. The arena
+              hosts a variety of events, including Red Bull Munich ice hockey
+              and FC Bayern basketball games, integrating state-of-the-art
+              architecture with advanced digital technologies to enhance
+              engagement and connectivity.
             </p>
             <ul>
               <li>
