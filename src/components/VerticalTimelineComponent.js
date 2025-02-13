@@ -1,4 +1,9 @@
-import { Bs0Circle } from "react-icons/bs";
+import {
+  Bs0Circle,
+  BsFillRocketTakeoffFill,
+  BsCarFrontFill,
+  BsFillMortarboardFill,
+} from "react-icons/bs";
 
 import { useRef, useState, useEffect } from "react";
 
@@ -107,14 +112,6 @@ export default function VerticalTimelineComponent() {
     {
       original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_02.jpg",
       thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_02.jpg",
-    },
-    {
-      original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_03.jpg",
-      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_03.jpg",
-    },
-    {
-      original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_04.jpg",
-      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_04.jpg",
     },
     {
       original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_05.jpg",
@@ -260,7 +257,7 @@ export default function VerticalTimelineComponent() {
               rootMargin: "0px 0px -40px 0px",
               triggerOnce: false,
             }}
-            className="vertical-timeline-element--RBBasement"
+            className="vertical-timeline-element--SAPGardenDigitalEcosystem"
             contentStyle={{
               background: "rgb(255, 255, 255)",
               color: "rgb(0, 0, 0)",
@@ -268,12 +265,12 @@ export default function VerticalTimelineComponent() {
             contentArrowStyle={{
               borderRight: "12px solid  rgb(255, 255, 255)",
             }}
-            date="07.2022 - present"
+            date="06.2021 - present"
             iconStyle={{
               background: "rgb(255, 255, 255)",
               color: "rgb(0, 0, 0)",
             }}
-            icon={<Bs0Circle />}
+            icon={<BsFillRocketTakeoffFill />}
           >
             {/* Logo in top right Corner */}
             <img
@@ -284,7 +281,7 @@ export default function VerticalTimelineComponent() {
                 top: "15px",
                 position: "absolute",
               }}
-              alt="Test"
+              alt="Red Bull Logo"
             ></img>
 
             {/* Content Text */}
@@ -410,7 +407,7 @@ export default function VerticalTimelineComponent() {
               background: "rgb(255, 255, 255)",
               color: "rgb(0, 0, 0)",
             }}
-            icon={<Bs0Circle />}
+            icon={<BsCarFrontFill />}
           >
             {/* Logo in top right Corner */}
             <img
@@ -420,7 +417,7 @@ export default function VerticalTimelineComponent() {
                 right: "15px",
                 position: "absolute",
               }}
-              alt="Test"
+              alt="BMW M Logo"
             ></img>
 
             {/* Content Text */}
@@ -434,12 +431,12 @@ export default function VerticalTimelineComponent() {
               Project Manager & Instructor @BMW M
             </h4>
             <p>
-              World's first Mixed Reality application for a real car driving in
-              a virtual world. The goal was to create a unique, engaging
-              experience that bridges the gap between physical and digital
-              environments, offering drivers and enthusiasts a new way to
-              connect with the BMW M4's performance features in both virtual and
-              real-world settings.
+              Together with BMW M I developed the world's first Mixed Reality
+              Experience for a real car driving in a virtual world. My goal was
+              to create a unique, engaging experience that bridges the gap
+              between physical and digital environments, allowing drivers and
+              enthusiasts to connect with the BMW M4's performance features in
+              both virtual and real-world settings.
             </p>
             <ul>
               <li>
@@ -483,6 +480,12 @@ export default function VerticalTimelineComponent() {
               >
                 AI
               </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                INNOVATION
+              </div>
             </div>
 
             {/* Gallery */}
@@ -516,12 +519,12 @@ export default function VerticalTimelineComponent() {
             contentArrowStyle={{
               borderRight: "12px solid  rgb(255, 255, 255)",
             }}
-            date="04.2023 - present"
+            date="10.2024 - 11.2024"
             iconStyle={{
               background: "rgb(255, 255, 255)",
               color: "rgb(0, 0, 0)",
             }}
-            icon={<Bs0Circle />}
+            icon={<BsFillMortarboardFill />}
           >
             {/* Logo in top right Corner */}
             <img
@@ -532,7 +535,7 @@ export default function VerticalTimelineComponent() {
                 top: "15px",
                 position: "absolute",
               }}
-              alt="Test"
+              alt="Red Bull Basement Logo"
             ></img>
 
             {/* Content Text */}
@@ -546,14 +549,15 @@ export default function VerticalTimelineComponent() {
               Senior Digital Ecosystem Owner @Red Bull Munich
             </h4>
             <p>
-              Red Bull Basement is a global initiative designed to empower
-              students to develop innovative ideas and solutions that tackle
-              pressing social, environmental, and technological challenges. It
-              provides a platform for young change-makers to collaborate, refine
-              their ideas, and bring them to life. The program culminates in a
-              global meeting where teams present their concepts to a panel of
-              experts, fostering a culture of innovation and forward-thinking
-              among the next generation of leaders.
+              As part of Red Bull Basement, I contributed to a global initiative
+              that empowers students to develop innovative ideas and solutions
+              addressing pressing social, environmental, and technological
+              challenges. The program provides a platform for young
+              change-makers to collaborate, refine their ideas, and bring them
+              to life. It all culminates in a global world final where teams
+              present their concepts to a panel of experts, fostering a culture
+              of innovation and forward-thinking among the next generation of
+              leaders.
             </p>
             <ul>
               <li>
@@ -576,6 +580,39 @@ export default function VerticalTimelineComponent() {
                 and impactful idea exchange.
               </li>
             </ul>
+
+            <div className="containerLablesForSkills">
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                ENTREPRENEURSHIP
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                SUSTAINABILITY
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                PROTOTYPING
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                STUDENT PROGRAM
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                COLLABORATION
+              </div>
+            </div>
 
             {/* Gallery */}
             <ImageGallery
