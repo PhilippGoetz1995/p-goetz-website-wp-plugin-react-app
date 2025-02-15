@@ -3,9 +3,10 @@ import {
   BsFillRocketTakeoffFill,
   BsCarFrontFill,
   BsFillMortarboardFill,
+  BsGlobeAsiaAustralia,
 } from "react-icons/bs";
 
-import { TbAugmentedReality2 } from "react-icons/tb";
+import { TbAugmentedReality2, TbBasketHeart } from "react-icons/tb";
 
 import { IoAnalyticsSharp } from "react-icons/io5";
 
@@ -303,6 +304,53 @@ export default function VerticalTimelineComponent() {
       thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_6.jpg",
     },
   ];
+  const gallery_BMW_Visualizer = [
+    {
+      original:
+        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_1.png",
+      thumbnail:
+        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_1.png",
+    },
+    {
+      original:
+        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_2.jpg",
+      thumbnail:
+        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_2.jpg",
+    },
+    {
+      original:
+        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_3.png",
+      thumbnail:
+        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_3.png",
+    },
+    {
+      original:
+        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_4.jpg",
+      thumbnail:
+        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_4.jpg",
+    },
+    {
+      original:
+        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_5.png",
+      thumbnail:
+        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_5.png",
+    },
+  ];
+
+  const gallery_Myfarmbox = [
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_2.png",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_2.png",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_1.png",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_1.png",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_3.png",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_3.png",
+    },
+  ];
 
   return (
     <>
@@ -311,6 +359,7 @@ export default function VerticalTimelineComponent() {
         style={{ backgroundColor: "#2c3e50", width: "100%" }}
       >
         <VerticalTimeline>
+          
           {/* SAP Garden Digital Eco System */}
           <VerticalTimelineElement
             intersectionObserverProps={{
@@ -916,14 +965,269 @@ export default function VerticalTimelineComponent() {
             />
           </VerticalTimelineElement>
 
+          {/* BMW M Visualizer*/}
+          <VerticalTimelineElement
+            intersectionObserverProps={{
+              rootMargin: "0px 0px -40px 0px",
+              triggerOnce: false,
+            }}
+            className="vertical-timeline-element--BMW-RN"
+            contentStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            contentArrowStyle={{
+              borderRight: "12px solid  rgb(255, 255, 255)",
+            }}
+            date="03.2019 - 04.2021"
+            iconStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            icon={<BsGlobeAsiaAustralia />}
+          >
+            {/* Logo in top right Corner */}
+            <img
+              src="https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Logo.png"
+              style={{
+                width: "100px",
+                right: "15px",
+                position: "absolute",
+              }}
+              alt="BMW M Logo"
+            ></img>
+
+            {/* Content Text */}
+            <h3 className="vertical-timeline-element-title">
+              BMW M Individual Visualizer
+            </h3>
+            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
+              MAIN JOB
+            </div>
+            <h4 className="vertical-timeline-element-subtitle">
+              Project Manager @BMW M
+            </h4>
+            <p>
+              As a Project Manager, I was responsible for the development and
+              global rollout of the BMW M Individual Visualizer, an advanced
+              customization tool that extended the traditional car configurator
+              by offering 120+ special colors and personalized seat embroidery.
+              I was responsible for launching the tool in 24 countries,
+              coordinating with global factories and supply chain teams to
+              streamline the ordering process for these exclusive accessories.
+              By leveraging data-driven optimization, we enhanced the customer
+              journey, making luxury car customization more intuitive and
+              accessible worldwide.
+            </p>
+            <ul>
+              <li>
+                🌍 <b>Managed global rollout:</b> Across 24 countries, ensuring
+                seamless integration into local markets
+              </li>
+              <li>
+                🏭{" "}
+                <b>Worked closely with BMW factories & supply chain teams:</b>{" "}
+                optimize ordering process
+              </li>
+              <li>
+                📈 <b>Leveraged data-driven insights:</b> enhance the customer
+                journey & streamline operations.
+              </li>
+              <li>
+                🚀
+                <b>
+                  Successfully transformed the premium customization experience:
+                </b>
+                Setting a new industry benchmark
+              </li>
+            </ul>
+
+            <div className="containerLablesForSkills">
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                GLOBAL ROLLOUT
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                AUTOMOTIVE
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                VISUALISATION
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                PROCESS OPTIMIZATION
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                E-COMMERCE
+              </div>
+            </div>
+
+            {/* Gallery */}
+            <ImageGallery
+              items={gallery_BMW_Visualizer}
+              ref={gallery1Ref}
+              showVideo={renderVideo}
+              showPlayButton={false}
+              onClick={() => handleCustomFullscreen2(lightboxIndex2)}
+              onSlide={() => handleSlideChange(gallery1Ref)}
+            />
+            <Lightbox
+              open={isOpen2}
+              close={() => setIsOpen2(false)}
+              slides={gallery_BMW_MMR.map((img) => ({ src: img.original }))}
+              index={lightboxIndex2}
+              onIndexChange={setLightboxIndex2}
+            />
+          </VerticalTimelineElement>
+
+          {/* Myfarmbox */}
+          <VerticalTimelineElement
+            intersectionObserverProps={{
+              rootMargin: "0px 0px -40px 0px",
+              triggerOnce: false,
+            }}
+            className="vertical-timeline-element--BMW-RN"
+            contentStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            contentArrowStyle={{
+              borderRight: "12px solid  rgb(255, 255, 255)",
+            }}
+            date="04.2020 - 01.2021"
+            iconStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            icon={<TbBasketHeart />}
+          >
+            {/* Logo in top right Corner */}
+            <img
+              src="http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_logo.png"
+              style={{
+                width: "100px",
+                right: "15px",
+                position: "absolute",
+              }}
+              alt="Myfarmbox Logo"
+            ></img>
+
+            {/* Content Text */}
+            <h3 className="vertical-timeline-element-title">
+              Myfarmbox.de Local Food E-Commerce
+            </h3>
+            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
+              SIDE PROJECT
+            </div>
+            <h4 className="vertical-timeline-element-subtitle">Co-Founder</h4>
+            <p>
+              During the COVID-19 pandemic, I co-founded an online marketplace
+              for local food, ensuring that people could still access
+              high-quality weekend market products from the comfort of their
+              homes. Together with two friends, I worked closely with local
+              farmers to create a seamless farm-to-table experience. My role
+              focused on all things digital, from developing the e-commerce
+              platform to optimizing the supply chain, ensuring a smooth and
+              efficient operation that connected local producers with customers.
+            </p>
+            <ul>
+              <li>
+                🌍 <b>Founded an online marketplace:</b> bringing local farm
+                products directly to customers
+              </li>
+              <li>
+                🛒<b> Developed e-commerce platform:</b> creating an intuitive
+                shopping experience
+              </li>
+              <li>
+                🚛 <b>Optimized the supply chain:</b> streamlining logistics and
+                delivery for efficiency
+              </li>
+              <li>
+                🚀
+                <b>Successfully launched in 5 weeks: </b>
+                Made local food accessible again
+              </li>
+            </ul>
+
+            <div className="containerLablesForSkills">
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                E-COMMERCE
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                SUSTAINABILITY
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                STARTUP
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                DEVELOPMENT
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                LOGISTICS
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                UNTERNEHMERTUM
+              </div>
+            </div>
+
+            {/* Gallery */}
+            <ImageGallery
+              items={gallery_Myfarmbox}
+              ref={gallery1Ref}
+              showVideo={renderVideo}
+              showPlayButton={false}
+              onClick={() => handleCustomFullscreen2(lightboxIndex2)}
+              onSlide={() => handleSlideChange(gallery1Ref)}
+            />
+            <Lightbox
+              open={isOpen2}
+              close={() => setIsOpen2(false)}
+              slides={gallery_BMW_MMR.map((img) => ({ src: img.original }))}
+              index={lightboxIndex2}
+              onIndexChange={setLightboxIndex2}
+            />
+          </VerticalTimelineElement>
+
           <VerticalTimelineElement
             intersectionObserverProps={{
               rootMargin: "0px 0px -40px 0px",
               triggerOnce: false,
             }}
             iconStyle={{
-              background: "rgb(16, 204, 82)",
-              color: "#fff",
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
             }}
             icon={<Bs0Circle />}
           />
