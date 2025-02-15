@@ -8,6 +8,8 @@ import {
 
 import { TbAugmentedReality2, TbBasketHeart } from "react-icons/tb";
 
+import { MdOutlineDesignServices } from "react-icons/md";
+
 import { IoAnalyticsSharp } from "react-icons/io5";
 
 import { useRef, useState, useEffect } from "react";
@@ -352,6 +354,25 @@ export default function VerticalTimelineComponent() {
     },
   ];
 
+  const gallery_DDX = [
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_1.png",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_1.png",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_2.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_2.jpg",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_3.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_3.jpg",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_4.jpeg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_4.jpeg",
+    },
+  ];
+
   return (
     <>
       <div
@@ -359,7 +380,6 @@ export default function VerticalTimelineComponent() {
         style={{ backgroundColor: "#2c3e50", width: "100%" }}
       >
         <VerticalTimeline>
-          
           {/* SAP Garden Digital Eco System */}
           <VerticalTimelineElement
             intersectionObserverProps={{
@@ -617,7 +637,118 @@ export default function VerticalTimelineComponent() {
             />
           </VerticalTimelineElement>
 
-          {/* RB Mixed Reality */}
+          {/* DDX */}
+          <VerticalTimelineElement
+            intersectionObserverProps={{
+              rootMargin: "0px 0px -40px 0px",
+              triggerOnce: false,
+            }}
+            className="vertical-timeline-element--SAPGardenDigitalEcosystem"
+            contentStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            contentArrowStyle={{
+              borderRight: "12px solid  rgb(255, 255, 255)",
+            }}
+            date="15.05.2024"
+            iconStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            icon={<MdOutlineDesignServices />}
+          >
+            {/* Logo in top right Corner */}
+            <img
+              src="http://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+              style={{
+                width: "70px",
+                right: "15px",
+                top: "15px",
+                position: "absolute",
+              }}
+              alt="Red Bull Logo"
+            ></img>
+
+            {/* Content Text */}
+            <h3 className="vertical-timeline-element-title">
+              Speaker @DDX | Innovation & UX Conference
+            </h3>
+            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
+              MAIN JOB
+            </div>
+            <h4 className="vertical-timeline-element-subtitle">
+              Senior Digital Ecosystem Owner @Red Bull Munich
+            </h4>
+            <p>
+              I had the honor of speaking at the "DDX | Innovation & UX"
+              conference in Munich, organized in collaboration with
+              UnternehmerTUM. The event’s goal was to bring together designers,
+              tech experts, and digital leaders to foster networking and fresh
+              perspectives on crucial industry topics. Through my talk, I
+              contributed insights on the intersection of design, technology,
+              and innovation, helping to shape discussions on the future of
+              digital product development.
+            </p>
+
+            <div className="containerLablesForSkills">
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                CONFERENCE
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                DESIGN
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                UX
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                AI
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                SUSTAINABILITY
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                DIGITAL
+              </div>
+            </div>
+
+            {/* Gallery */}
+            <ImageGallery
+              items={gallery_DDX}
+              ref={gallery3Ref}
+              onSlide={() => handleSlideChange(gallery3Ref)}
+              onClick={() => handleCustomFullscreen1(lightboxIndex1)}
+              showPlayButton={false}
+            />
+
+            <Lightbox
+              open={isOpen1}
+              close={() => setIsOpen1(false)}
+              slides={gallery_SAPGDP.map((img) => ({ src: img.original }))}
+              index={lightboxIndex1}
+              onIndexChange={setLightboxIndex1}
+            />
+          </VerticalTimelineElement>
+
+          {/* SAP Garden Mixed Reality */}
           <VerticalTimelineElement
             intersectionObserverProps={{
               rootMargin: "0px 0px -40px 0px",
