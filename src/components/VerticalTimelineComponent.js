@@ -357,7 +357,8 @@ export default function VerticalTimelineComponent() {
   const gallery_DDX = [
     {
       original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_1.png",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_1.png",
+      thumbnail:
+        "http://p-goetz.de/wp-content/uploads/2025/02/DDX_1_Thumbnail.png",
     },
     {
       original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_2.jpg",
