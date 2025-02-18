@@ -1,5 +1,4 @@
 import {
-  Bs0Circle,
   BsFillRocketTakeoffFill,
   BsCarFrontFill,
   BsFillMortarboardFill,
@@ -256,172 +255,170 @@ export default function VerticalTimelineComponent() {
 
   const gallery_RBMixedReality = [
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_1.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_1.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_1.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_1.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_2.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_2.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_2.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_2.jpg",
     },
 
     {
       embedUrl:
-        "http://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_Video.mp4",
+        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_Video.mp4",
       original:
-        "http://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_Video_Thumbnail.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_Video_Thumbnail.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_Video_Thumbnail.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_Video_Thumbnail.jpg",
       renderItem: renderVideo.bind(this),
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_3.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_3.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_3.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_3.jpg",
     },
   ];
 
   const gallery_BMW_RN = [
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_1.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_1.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_1.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_1.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_2.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_2.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_2.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_2.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_3.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_3.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_3.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_3.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_4.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_4.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_4.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_4.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_5.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_5.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_5.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_5.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_6.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_6.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_6.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_RN_6.jpg",
     },
   ];
   const gallery_BMW_Visualizer = [
     {
       original:
-        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_1.png",
+        "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_1.png",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_1.png",
+        "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_1.png",
     },
     {
       original:
-        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_2.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_2.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_2.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_2.jpg",
     },
     {
       original:
-        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_3.png",
+        "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_3.png",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_3.png",
+        "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_3.png",
     },
     {
       original:
-        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_4.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_4.jpg",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_4.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_4.jpg",
     },
     {
       original:
-        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_5.png",
+        "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_5.png",
       thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_5.png",
+        "https://p-goetz.de/wp-content/uploads/2025/02/BMWM_Visualizer_5.png",
     },
   ];
 
   const gallery_Myfarmbox = [
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_2.png",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_2.png",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_2.png",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_2.png",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_1.png",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_1.png",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_1.png",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_1.png",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_3.png",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_3.png",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_3.png",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_3.png",
     },
   ];
 
-
-
   const gallery_DDX = [
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_1.png",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_1.png",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/DDX_1.png",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/DDX_1.png",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_2.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_2.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/DDX_2.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/DDX_2.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_5.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_5.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/DDX_5.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/DDX_5.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_3.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_3.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/DDX_3.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/DDX_3.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_4.jpeg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_4.jpeg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/DDX_4.jpeg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/DDX_4.jpeg",
     },
   ];
 
   const gallery_PACINO = [
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_1.png",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_1.png",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/PACINO_1.png",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/PACINO_1.png",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_2.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_2.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/PACINO_2.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/PACINO_2.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_3.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_3.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/PACINO_3.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/PACINO_3.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_4.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_4.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/PACINO_4.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/PACINO_4.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_5.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_5.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/PACINO_5.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/PACINO_5.jpg",
     },
     {
-      original: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_6.jpg",
-      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_6.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/PACINO_6.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/PACINO_6.jpg",
     },
   ];
 
-    const gallery_SXD = [
-      {
-        original: "http://p-goetz.de/wp-content/uploads/2025/02/SXD_1.jpg",
-        thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/SXD_1.jpg",
-      },
-      {
-        original: "http://p-goetz.de/wp-content/uploads/2025/02/SXD_2.jpg",
-        thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/SXD_2.jpg",
-      },
-      {
-        original: "http://p-goetz.de/wp-content/uploads/2025/02/SXD_3.jpg",
-        thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/SXD_3.jpg",
-      },
-    ];
+  const gallery_SXD = [
+    {
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/SXD_1.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/SXD_1.jpg",
+    },
+    {
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/SXD_2.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/SXD_2.jpg",
+    },
+    {
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/SXD_3.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/SXD_3.jpg",
+    },
+  ];
 
   return (
     <>
@@ -453,7 +450,7 @@ export default function VerticalTimelineComponent() {
           >
             {/* Logo in top right Corner */}
             <img
-              src="http://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+              src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
               style={{
                 width: "70px",
                 right: "15px",
@@ -710,7 +707,7 @@ export default function VerticalTimelineComponent() {
           >
             {/* Logo in top right Corner */}
             <img
-              src="http://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+              src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
               style={{
                 width: "70px",
                 right: "15px",
@@ -843,7 +840,7 @@ export default function VerticalTimelineComponent() {
           >
             {/* Logo in top right Corner */}
             <img
-              src="http://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+              src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
               style={{
                 width: "70px",
                 right: "15px",
@@ -954,7 +951,7 @@ export default function VerticalTimelineComponent() {
           >
             {/* Logo in top right Corner */}
             <img
-              src="http://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+              src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
               style={{
                 width: "70px",
                 right: "15px",
@@ -1430,7 +1427,7 @@ export default function VerticalTimelineComponent() {
           >
             {/* Logo in top right Corner */}
             <img
-              src="http://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_logo.png"
+              src="https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_logo.png"
               style={{
                 width: "100px",
                 right: "15px",
@@ -1557,7 +1554,7 @@ export default function VerticalTimelineComponent() {
           >
             {/* Logo in top right Corner */}
             <img
-              src="http://p-goetz.de/wp-content/uploads/2025/02/PACINO_Logo.png"
+              src="https://p-goetz.de/wp-content/uploads/2025/02/PACINO_Logo.png"
               style={{
                 width: "100px",
                 right: "15px",
