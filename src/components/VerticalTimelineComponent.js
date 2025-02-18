@@ -44,32 +44,36 @@ export default function VerticalTimelineComponent() {
     );
   };
 
+  //Create an array of gallery references
+  const galleryRefs = useRef([]);
+
   // Show and hide the Fullscreen Button for the gallery => Video Section
-  const handleSlideChange = (galleryRef) => {
-    var currentIndex = galleryRef.current.getCurrentIndex();
+  const handleSlideChange = (galleryRefIndex) => {
+    if (galleryRefs.current[galleryRefIndex]) {
+      var currentIndex = galleryRefs.current[galleryRefIndex].getCurrentIndex();
+    }
 
     // TODO Slide of the Lightbox is not aligned with the Gallery
     //setLightboxIndex1(currentIndex);
 
-    //console.log(currentIndex);
-
     const newIndex = currentIndex + 1;
-    galleryRef.current.slideToIndex(newIndex);
+    galleryRefs.current[galleryRefIndex].slideToIndex(newIndex);
 
     //Here i get the current slide and if it is a video i insert a video player
-    var imageGallerySlide =
-      galleryRef.current.imageGallerySlideWrapper.current.querySelector(
-        ".image-gallery-slides"
-      ).children[currentIndex];
+    var imageGallerySlide = galleryRefs.current[
+      galleryRefIndex
+    ].imageGallerySlideWrapper.current.querySelector(".image-gallery-slides")
+      .children[currentIndex];
 
     //Execute only if there is a next slide
     if (imageGallerySlide) {
       // Check if there is a video wrapper inside
       var videoBoolean = imageGallerySlide.querySelector(".video-wrapper");
-      var fullScreenButton =
-        galleryRef.current.imageGallerySlideWrapper.current.querySelector(
-          ".image-gallery-fullscreen-button"
-        );
+      var fullScreenButton = galleryRefs.current[
+        galleryRefIndex
+      ].imageGallerySlideWrapper.current.querySelector(
+        ".image-gallery-fullscreen-button"
+      );
       if (videoBoolean) {
         fullScreenButton.style.display = "none";
       } else {
@@ -77,10 +81,6 @@ export default function VerticalTimelineComponent() {
       }
     }
   };
-
-  const gallery1Ref = useRef();
-  const gallery2Ref = useRef();
-  const gallery3Ref = useRef();
 
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
@@ -98,6 +98,7 @@ export default function VerticalTimelineComponent() {
     setIsOpen2(true);
   };
 
+  // Disable the key left and right because it is interferring with other gallerys
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
@@ -530,8 +531,8 @@ export default function VerticalTimelineComponent() {
             {/* Gallery */}
             <ImageGallery
               items={gallery_SAPGDP}
-              ref={gallery3Ref}
-              onSlide={() => handleSlideChange(gallery3Ref)}
+              ref={(el) => (galleryRefs.current["gallery_SAPGDP"] = el)}
+              onSlide={() => handleSlideChange("gallery_SAPGDP")}
               onClick={() => handleCustomFullscreen1(lightboxIndex1)}
               showPlayButton={false}
             />
@@ -635,8 +636,8 @@ export default function VerticalTimelineComponent() {
             {/* Gallery */}
             <ImageGallery
               items={gallery_RBBasement}
-              ref={gallery2Ref}
-              onSlide={() => handleSlideChange(gallery2Ref)}
+              ref={(el) => (galleryRefs.current["gallery_RBBasement"] = el)}
+              onSlide={() => handleSlideChange("gallery_RBBasement")}
               showVideo={renderVideo}
               showPlayButton={false}
             />
@@ -733,8 +734,8 @@ export default function VerticalTimelineComponent() {
             {/* Gallery */}
             <ImageGallery
               items={gallery_SXD}
-              ref={gallery3Ref}
-              onSlide={() => handleSlideChange(gallery3Ref)}
+              ref={(el) => (galleryRefs.current["gallery_SXD"] = el)}
+              onSlide={() => handleSlideChange("gallery_SXD")}
               onClick={() => handleCustomFullscreen1(lightboxIndex1)}
               showPlayButton={false}
             />
@@ -817,8 +818,8 @@ export default function VerticalTimelineComponent() {
             {/* Gallery */}
             <ImageGallery
               items={gallery_DDX}
-              ref={gallery3Ref}
-              onSlide={() => handleSlideChange(gallery3Ref)}
+              ref={(el) => (galleryRefs.current["gallery_DDX"] = el)}
+              onSlide={() => handleSlideChange("gallery_DDX")}
               onClick={() => handleCustomFullscreen1(lightboxIndex1)}
               showPlayButton={false}
             />
@@ -919,8 +920,8 @@ export default function VerticalTimelineComponent() {
             {/* Gallery */}
             <ImageGallery
               items={gallery_RBMixedReality}
-              ref={gallery2Ref}
-              onSlide={() => handleSlideChange(gallery2Ref)}
+              ref={(el) => (galleryRefs.current["gallery_RBMixedReality"] = el)}
+              onSlide={() => handleSlideChange("gallery_RBMixedReality")}
               showVideo={renderVideo}
               showPlayButton={false}
             />
@@ -1013,11 +1014,11 @@ export default function VerticalTimelineComponent() {
             {/* Gallery */}
             <ImageGallery
               items={gallery_BMW_MMR}
-              ref={gallery1Ref}
+              ref={(el) => (galleryRefs.current["gallery_BMW_MMR"] = el)}
+              onSlide={() => handleSlideChange("gallery_BMW_MMR")}
               showVideo={renderVideo}
               showPlayButton={false}
               onClick={() => handleCustomFullscreen2(lightboxIndex2)}
-              onSlide={() => handleSlideChange(gallery1Ref)}
             />
             <Lightbox
               open={isOpen2}
@@ -1115,11 +1116,11 @@ export default function VerticalTimelineComponent() {
             {/* Gallery */}
             <ImageGallery
               items={gallery_BMW_RN}
-              ref={gallery1Ref}
+              ref={(el) => (galleryRefs.current["gallery_BMW_RN"] = el)}
+              onSlide={() => handleSlideChange("gallery_BMW_RN")}
               showVideo={renderVideo}
               showPlayButton={false}
               onClick={() => handleCustomFullscreen2(lightboxIndex2)}
-              onSlide={() => handleSlideChange(gallery1Ref)}
             />
             <Lightbox
               open={isOpen2}
@@ -1224,11 +1225,11 @@ export default function VerticalTimelineComponent() {
             {/* Gallery */}
             <ImageGallery
               items={gallery_BMW_Visualizer}
-              ref={gallery1Ref}
+              ref={(el) => (galleryRefs.current["gallery_BMW_Visualizer"] = el)}
+              onSlide={() => handleSlideChange("gallery_BMW_Visualizer")}
               showVideo={renderVideo}
               showPlayButton={false}
               onClick={() => handleCustomFullscreen2(lightboxIndex2)}
-              onSlide={() => handleSlideChange(gallery1Ref)}
             />
             <Lightbox
               open={isOpen2}
@@ -1324,11 +1325,11 @@ export default function VerticalTimelineComponent() {
             {/* Gallery */}
             <ImageGallery
               items={gallery_Myfarmbox}
-              ref={gallery1Ref}
+              ref={(el) => (galleryRefs.current["gallery_Myfarmbox"] = el)}
+              onSlide={() => handleSlideChange("gallery_Myfarmbox")}
               showVideo={renderVideo}
               showPlayButton={false}
               onClick={() => handleCustomFullscreen2(lightboxIndex2)}
-              onSlide={() => handleSlideChange(gallery1Ref)}
             />
             <Lightbox
               open={isOpen2}
@@ -1424,11 +1425,11 @@ export default function VerticalTimelineComponent() {
             {/* Gallery */}
             <ImageGallery
               items={gallery_PACINO}
-              ref={gallery1Ref}
+              ref={(el) => (galleryRefs.current["gallery_PACINO"] = el)}
+              onSlide={() => handleSlideChange("gallery_PACINO")}
               showVideo={renderVideo}
               showPlayButton={false}
               onClick={() => handleCustomFullscreen2(lightboxIndex2)}
-              onSlide={() => handleSlideChange(gallery1Ref)}
             />
             <Lightbox
               open={isOpen2}
