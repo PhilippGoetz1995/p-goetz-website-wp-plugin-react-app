@@ -1,0 +1,125 @@
+/* BACKUP WORDPRESS STYLING STAND 18.02.2025 */
+
+ul {
+  margin-left: 25px !important;
+  margin-top: 6px !important;
+  margin-bottom: 0px !important;
+}
+
+#menu-main .bklyn-btn {
+  top: -3px !important;
+}
+
+.vertical-timeline-element-logo {
+  right: 15px;
+  top: 15px;
+  position: absolute;
+}
+
+.image-gallery-slide-wrapper button:hover {
+  background-color: transparent !important;
+}
+
+.image-gallery-slide-wrapper button:focus {
+  background-color: transparent !important;
+}
+
+.vertical-timeline-element-content p {
+  line-height: 1.3 !important;
+  margin-top: 2px !important;
+}
+
+.vertical-timeline-element-content li {
+  line-height: 1.5 !important;
+  padding-bottom: 4px !important;
+}
+
+.containerLablesForSkills {
+  width: 100%;
+  height: 50px;
+}
+
+.labelDesign {
+  height: 20px;
+  line-height: 13px;
+  float: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.025rem;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 1.25rem;
+  -webkit-border-radius: 1.25rem;
+  -moz-border-radius: 1.25rem;
+  padding: 4px 8px;
+}
+
+.lableForJob {
+  margin-top: 4px;
+  margin-right: 8px;
+}
+
+.lableForSkills {
+  margin-top: 4px;
+  margin-right: 8px;
+  background-color: #485460;
+}
+
+/* Styling for gallery in Vertical Timeline */
+
+.image-gallery-thumbnail img {
+  object-fit: cover;
+  height: 56.25px !important;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Adjust this ratio to match the video aspect ratio */
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  h3 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  h4 {
+    font-size: 13px;
+    line-height: 23px;
+    padding-top: 2px;
+  }
+
+  .vertical-timeline-element-logo-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+  }
+
+  .vertical-timeline-element-logo {
+    position: static !important;
+  }
+
+  .lableForJob {
+    font-size: 9px;
+  }
+
+  .vertical-timeline-element-content p {
+    font-size: 12px !important;
+  }
+
+  ul {
+    font-size: 12px;
+    margin-left: 15px !important;
+  }
+}

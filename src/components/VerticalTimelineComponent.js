@@ -677,7 +677,7 @@ export default function VerticalTimelineComponent() {
 
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
-              Speaker @DDX | Innovation & UX Conference
+              Speaker @SXD - Sustainability x Digital
             </h3>
             <div
               className="labelDesign lableForJob"
@@ -783,7 +783,7 @@ export default function VerticalTimelineComponent() {
 
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
-              Speaker @DDX | Innovation & UX Conference
+              Speaker @DDX - Innovation & UX Conference
             </h3>
             <div
               className="labelDesign lableForJob"
