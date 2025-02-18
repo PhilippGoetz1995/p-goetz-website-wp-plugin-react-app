@@ -1277,7 +1277,7 @@ export default function VerticalTimelineComponent() {
             </h3>
             <div
               className="labelDesign lableForJob"
-              style={{ backgroundColor: "#130f40" }}
+              style={{ backgroundColor: "#1e3799" }}
             >
               SIDE PROJECT
             </div>
@@ -1378,7 +1378,7 @@ export default function VerticalTimelineComponent() {
             </h3>
             <div
               className="labelDesign lableForJob"
-              style={{ backgroundColor: "#130f40" }}
+              style={{ backgroundColor: "#1e3799" }}
             >
               SIDE PROJECT
             </div>
