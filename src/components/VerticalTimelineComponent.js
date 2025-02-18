@@ -6,6 +6,8 @@ import {
   BsGlobeAsiaAustralia,
 } from "react-icons/bs";
 
+import { PiPlantLight } from "react-icons/pi";
+
 import { TbAugmentedReality2, TbBasketHeart } from "react-icons/tb";
 
 import { MdOutlineDesignServices } from "react-icons/md";
@@ -354,15 +356,20 @@ export default function VerticalTimelineComponent() {
     },
   ];
 
+
+
   const gallery_DDX = [
     {
       original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_1.png",
-      thumbnail:
-        "http://p-goetz.de/wp-content/uploads/2025/02/DDX_1_Thumbnail.png",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_1.png",
     },
     {
       original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_2.jpg",
       thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_2.jpg",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_5.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_5.jpg",
     },
     {
       original: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_3.jpg",
@@ -373,6 +380,48 @@ export default function VerticalTimelineComponent() {
       thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/DDX_4.jpeg",
     },
   ];
+
+  const gallery_PACINO = [
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_1.png",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_1.png",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_2.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_2.jpg",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_3.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_3.jpg",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_4.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_4.jpg",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_5.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_5.jpg",
+    },
+    {
+      original: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_6.jpg",
+      thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/PACINO_6.jpg",
+    },
+  ];
+
+    const gallery_SXD = [
+      {
+        original: "http://p-goetz.de/wp-content/uploads/2025/02/SXD_1.jpg",
+        thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/SXD_1.jpg",
+      },
+      {
+        original: "http://p-goetz.de/wp-content/uploads/2025/02/SXD_2.jpg",
+        thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/SXD_2.jpg",
+      },
+      {
+        original: "http://p-goetz.de/wp-content/uploads/2025/02/SXD_3.jpg",
+        thumbnail: "http://p-goetz.de/wp-content/uploads/2025/02/SXD_3.jpg",
+      },
+    ];
 
   return (
     <>
@@ -533,7 +582,7 @@ export default function VerticalTimelineComponent() {
             contentArrowStyle={{
               borderRight: "12px solid  rgb(255, 255, 255)",
             }}
-            date="10.2024 - 11.2024"
+            date="10.2024 - 12.2024"
             iconStyle={{
               background: "rgb(255, 255, 255)",
               color: "rgb(0, 0, 0)",
@@ -635,6 +684,139 @@ export default function VerticalTimelineComponent() {
               onSlide={() => handleSlideChange(gallery2Ref)}
               showVideo={renderVideo}
               showPlayButton={false}
+            />
+          </VerticalTimelineElement>
+
+          {/* SXD */}
+          <VerticalTimelineElement
+            intersectionObserverProps={{
+              rootMargin: "0px 0px -40px 0px",
+              triggerOnce: false,
+            }}
+            className="vertical-timeline-element--SAPGardenDigitalEcosystem"
+            contentStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            contentArrowStyle={{
+              borderRight: "12px solid  rgb(255, 255, 255)",
+            }}
+            date="15.05.2024"
+            iconStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            icon={<PiPlantLight />}
+          >
+            {/* Logo in top right Corner */}
+            <img
+              src="http://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+              style={{
+                width: "70px",
+                right: "15px",
+                top: "15px",
+                position: "absolute",
+              }}
+              alt="Red Bull Logo"
+            ></img>
+
+            {/* Content Text */}
+            <h3 className="vertical-timeline-element-title">
+              Speaker @DDX | Innovation & UX Conference
+            </h3>
+            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
+              MAIN JOB
+            </div>
+            <h4 className="vertical-timeline-element-subtitle">
+              Senior Digital Ecosystem Owner @Red Bull Munich
+            </h4>
+            <p>
+              I was invited as a speaker at the SXD (Sustainability x Digital)
+              Conference, where sustainability leaders and digital innovators
+              came together to explore how technology can drive environmental
+              impact. My talk focused on leveraging digital solutions for
+              sustainability, highlighting how businesses can integrate
+              tech-driven approaches to create measurable environmental change.
+            </p>
+
+            <ul>
+              <li>
+                💡 <b>Explored tech-driven sustainability strategies:</b>
+                sharing insights at the intersection of sustainability & digital
+                transformation
+              </li>
+              <li>
+                📊 <b>showcased real-world case studies:</b> demonstrating the
+                impact of digital tools in sustainability efforts
+              </li>
+              <li>
+                🔗{" "}
+                <b>
+                  Discussed the role of AI, automation & digital infrastructure:
+                </b>
+                optimizing sustainable business practices
+              </li>
+              <li>
+                🌍 <b>Global Engagement:</b> Collaborated with a diverse group
+                of innovators from 40 different countries, fostering creativity
+                and impactful idea exchange.
+              </li>
+            </ul>
+
+            <div className="containerLablesForSkills">
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                CONFERENCE
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                DIGITAL
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                SUSTAINABILITY
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                AI
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                SUSTAINABILITY
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                GREEN TECH
+              </div>
+            </div>
+
+            {/* Gallery */}
+            <ImageGallery
+              items={gallery_SXD}
+              ref={gallery3Ref}
+              onSlide={() => handleSlideChange(gallery3Ref)}
+              onClick={() => handleCustomFullscreen1(lightboxIndex1)}
+              showPlayButton={false}
+            />
+
+            <Lightbox
+              open={isOpen1}
+              close={() => setIsOpen1(false)}
+              slides={gallery_SAPGDP.map((img) => ({ src: img.original }))}
+              index={lightboxIndex1}
+              onIndexChange={setLightboxIndex1}
             />
           </VerticalTimelineElement>
 
@@ -1352,6 +1534,132 @@ export default function VerticalTimelineComponent() {
             />
           </VerticalTimelineElement>
 
+          {/* PACINO */}
+          <VerticalTimelineElement
+            intersectionObserverProps={{
+              rootMargin: "0px 0px -40px 0px",
+              triggerOnce: false,
+            }}
+            className="vertical-timeline-element--BMW-RN"
+            contentStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            contentArrowStyle={{
+              borderRight: "12px solid  rgb(255, 255, 255)",
+            }}
+            date="02.2019 - 10.2021"
+            iconStyle={{
+              background: "rgb(255, 255, 255)",
+              color: "rgb(0, 0, 0)",
+            }}
+            icon={<PiPlantLight />}
+          >
+            {/* Logo in top right Corner */}
+            <img
+              src="http://p-goetz.de/wp-content/uploads/2025/02/PACINO_Logo.png"
+              style={{
+                width: "100px",
+                right: "15px",
+                position: "absolute",
+              }}
+              alt="PACINO Logo"
+            ></img>
+
+            {/* Content Text */}
+            <h3 className="vertical-timeline-element-title">
+              PACINO - Sustainable Sunglasses
+            </h3>
+            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
+              SIDE PROJECT
+            </div>
+            <h4 className="vertical-timeline-element-subtitle">Co-Founder</h4>
+            <p>
+              I co-founded a sustainable startup that produced sunglasses made
+              from recycled ocean plastic. Beyond just creating eco-friendly
+              eyewear, our mission was to actively clean the ocean—for every
+              pair sold, we removed 1 kg of plastic from the sea. I was
+              responsible for our e-commerce shop, digital infrastructure, and
+              supply chain automation, ensuring a seamless customer experience
+              while maximizing our environmental impact.
+            </p>
+            <ul>
+              <li>
+                🌊 <b>Co-founded a sustainable startup:</b> turning ocean
+                plastic into high-quality sunglasses
+              </li>
+              <li>
+                ⚙️<b> Optimized the digital supply chain:</b> streamlining
+                logistics and order fulfillment
+              </li>
+              <li>
+                🚛 <b>Optimized the supply chain:</b> streamlining logistics and
+                delivery for efficiency
+              </li>
+              <li>
+                📢
+                <b>Raised awareness for ocean pollution: </b>
+                Integrating sustainability into branding & storytelling
+              </li>
+            </ul>
+
+            <div className="containerLablesForSkills">
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                E-COMMERCE
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                SUSTAINABILITY
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                STARTUP
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                SHOPIFY
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                REACT.js
+              </div>
+              <div
+                className="lableForJob"
+                style={{ backgroundColor: "#485460" }}
+              >
+                UNTERNEHMERTUM
+              </div>
+            </div>
+
+            {/* Gallery */}
+            <ImageGallery
+              items={gallery_PACINO}
+              ref={gallery1Ref}
+              showVideo={renderVideo}
+              showPlayButton={false}
+              onClick={() => handleCustomFullscreen2(lightboxIndex2)}
+              onSlide={() => handleSlideChange(gallery1Ref)}
+            />
+            <Lightbox
+              open={isOpen2}
+              close={() => setIsOpen2(false)}
+              slides={gallery_BMW_MMR.map((img) => ({ src: img.original }))}
+              index={lightboxIndex2}
+              onIndexChange={setLightboxIndex2}
+            />
+          </VerticalTimelineElement>
+
           <VerticalTimelineElement
             intersectionObserverProps={{
               rootMargin: "0px 0px -40px 0px",
@@ -1361,7 +1669,7 @@ export default function VerticalTimelineComponent() {
               background: "rgb(255, 255, 255)",
               color: "rgb(0, 0, 0)",
             }}
-            icon={<Bs0Circle />}
+            icon={<BsFillMortarboardFill />}
           />
         </VerticalTimeline>
       </div>
