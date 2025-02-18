@@ -255,12 +255,14 @@ export default function VerticalTimelineComponent() {
 
   const gallery_RBMixedReality = [
     {
-      original: "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_1.jpg",
+      original:
+        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_1.jpg",
       thumbnail:
         "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_1.jpg",
     },
     {
-      original: "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_2.jpg",
+      original:
+        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_2.jpg",
       thumbnail:
         "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_2.jpg",
     },
@@ -275,7 +277,8 @@ export default function VerticalTimelineComponent() {
       renderItem: renderVideo.bind(this),
     },
     {
-      original: "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_3.jpg",
+      original:
+        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_3.jpg",
       thumbnail:
         "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_3.jpg",
     },
@@ -343,15 +346,18 @@ export default function VerticalTimelineComponent() {
   const gallery_Myfarmbox = [
     {
       original: "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_2.png",
-      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_2.png",
+      thumbnail:
+        "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_2.png",
     },
     {
       original: "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_1.png",
-      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_1.png",
+      thumbnail:
+        "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_1.png",
     },
     {
       original: "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_3.png",
-      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_3.png",
+      thumbnail:
+        "https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_3.png",
     },
   ];
 
@@ -451,11 +457,9 @@ export default function VerticalTimelineComponent() {
             {/* Logo in top right Corner */}
             <img
               src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+              className="logo-vertical-timeline-element"
               style={{
                 width: "70px",
-                right: "15px",
-                top: "15px",
-                position: "absolute",
               }}
               alt="Red Bull Logo"
             ></img>
@@ -468,7 +472,7 @@ export default function VerticalTimelineComponent() {
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
-              Senior Digital Ecosystem Owner @Red Bull Munich
+              Senior Digital Ecosystem Owner
             </h4>
             <p>
               As the Senior Digital Ecosystem Owner for the SAP Garden Project,
@@ -589,11 +593,9 @@ export default function VerticalTimelineComponent() {
             {/* Logo in top right Corner */}
             <img
               src="https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Logo.png"
+              className="logo-vertical-timeline-element"
               style={{
                 width: "70px",
-                right: "15px",
-                top: "15px",
-                position: "absolute",
               }}
               alt="Red Bull Basement Logo"
             ></img>
@@ -708,11 +710,9 @@ export default function VerticalTimelineComponent() {
             {/* Logo in top right Corner */}
             <img
               src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+              className="logo-vertical-timeline-element"
               style={{
                 width: "70px",
-                right: "15px",
-                top: "15px",
-                position: "absolute",
               }}
               alt="Red Bull Logo"
             ></img>
@@ -841,11 +841,9 @@ export default function VerticalTimelineComponent() {
             {/* Logo in top right Corner */}
             <img
               src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+              className="logo-vertical-timeline-element"
               style={{
                 width: "70px",
-                right: "15px",
-                top: "15px",
-                position: "absolute",
               }}
               alt="Red Bull Logo"
             ></img>
@@ -952,11 +950,9 @@ export default function VerticalTimelineComponent() {
             {/* Logo in top right Corner */}
             <img
               src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+              className="logo-vertical-timeline-element"
               style={{
                 width: "70px",
-                right: "15px",
-                top: "15px",
-                position: "absolute",
               }}
               alt="Red Bull Logo"
             ></img>
@@ -1066,10 +1062,9 @@ export default function VerticalTimelineComponent() {
             {/* Logo in top right Corner */}
             <img
               src="https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Logo.png"
+              className="logo-vertical-timeline-element"
               style={{
                 width: "100px",
-                right: "15px",
-                position: "absolute",
               }}
               alt="BMW M Logo"
             ></img>
@@ -1184,10 +1179,9 @@ export default function VerticalTimelineComponent() {
             {/* Logo in top right Corner */}
             <img
               src="https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Logo.png"
+              className="logo-vertical-timeline-element"
               style={{
                 width: "100px",
-                right: "15px",
-                position: "absolute",
               }}
               alt="BMW M Logo"
             ></img>
@@ -1300,10 +1294,9 @@ export default function VerticalTimelineComponent() {
             {/* Logo in top right Corner */}
             <img
               src="https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Logo.png"
+              className="logo-vertical-timeline-element"
               style={{
                 width: "100px",
-                right: "15px",
-                position: "absolute",
               }}
               alt="BMW M Logo"
             ></img>
@@ -1428,10 +1421,9 @@ export default function VerticalTimelineComponent() {
             {/* Logo in top right Corner */}
             <img
               src="https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_logo.png"
+              className="logo-vertical-timeline-element"
               style={{
                 width: "100px",
-                right: "15px",
-                position: "absolute",
               }}
               alt="Myfarmbox Logo"
             ></img>
@@ -1555,10 +1547,9 @@ export default function VerticalTimelineComponent() {
             {/* Logo in top right Corner */}
             <img
               src="https://p-goetz.de/wp-content/uploads/2025/02/PACINO_Logo.png"
+              className="logo-vertical-timeline-element"
               style={{
                 width: "100px",
-                right: "15px",
-                position: "absolute",
               }}
               alt="PACINO Logo"
             ></img>
