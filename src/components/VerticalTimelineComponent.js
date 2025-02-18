@@ -468,7 +468,10 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               SAP Garden Digital Ecosystem
             </h3>
-            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
+            <div
+              className="labelDesign lableForJob"
+              style={{ backgroundColor: "#130f40" }}
+            >
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
@@ -513,42 +516,12 @@ export default function VerticalTimelineComponent() {
             </ul>
 
             <div className="containerLablesForSkills">
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                AGILE WORK
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                LEADERSHIP
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                TEAM MANAGEMENT
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                CO-INNOVATION
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                DATA ANALYTICS
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                CI/CD
-              </div>
+              <div className="labelDesign lableForSkills">AGILE WORK</div>
+              <div className="labelDesign lableForSkills">LEADERSHIP</div>
+              <div className="labelDesign lableForSkills">TEAM MANAGEMENT</div>
+              <div className="labelDesign lableForSkills">CO-INNOVATION</div>
+              <div className="labelDesign lableForSkills">DATA ANALYTICS</div>
+              <div className="labelDesign lableForSkills">CI/CD</div>
             </div>
 
             {/* Gallery */}
@@ -604,7 +577,10 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               Red Bull Basement - AI Edition - Tokyo, Japan
             </h3>
-            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
+            <div
+              className="labelDesign lableForJob"
+              style={{ backgroundColor: "#130f40" }}
+            >
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
@@ -644,36 +620,11 @@ export default function VerticalTimelineComponent() {
             </ul>
 
             <div className="containerLablesForSkills">
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                ENTREPRENEURSHIP
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                SUSTAINABILITY
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                PROTOTYPING
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                STUDENT PROGRAM
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                COLLABORATION
-              </div>
+              <div className="labelDesign lableForSkills">ENTREPRENEURSHIP</div>
+              <div className="labelDesign lableForSkills">SUSTAINABILITY</div>
+              <div className="labelDesign lableForSkills">PROTOTYPING</div>
+              <div className="labelDesign lableForSkills">STUDENT PROGRAM</div>
+              <div className="labelDesign lableForSkills">COLLABORATION</div>
             </div>
 
             {/* Gallery */}
@@ -721,7 +672,10 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               Speaker @DDX | Innovation & UX Conference
             </h3>
-            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
+            <div
+              className="labelDesign lableForJob"
+              style={{ backgroundColor: "#130f40" }}
+            >
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
@@ -761,42 +715,12 @@ export default function VerticalTimelineComponent() {
             </ul>
 
             <div className="containerLablesForSkills">
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                CONFERENCE
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                DIGITAL
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                SUSTAINABILITY
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                AI
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                SUSTAINABILITY
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                GREEN TECH
-              </div>
+              <div className="labelDesign lableForSkills">CONFERENCE</div>
+              <div className="labelDesign lableForSkills">DIGITAL</div>
+              <div className="labelDesign lableForSkills">SUSTAINABILITY</div>
+              <div className="labelDesign lableForSkills">AI</div>
+              <div className="labelDesign lableForSkills">SUSTAINABILITY</div>
+              <div className="labelDesign lableForSkills">GREEN TECH</div>
             </div>
 
             {/* Gallery */}
@@ -852,7 +776,10 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               Speaker @DDX | Innovation & UX Conference
             </h3>
-            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
+            <div
+              className="labelDesign lableForJob"
+              style={{ backgroundColor: "#130f40" }}
+            >
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
@@ -870,42 +797,12 @@ export default function VerticalTimelineComponent() {
             </p>
 
             <div className="containerLablesForSkills">
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                CONFERENCE
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                DESIGN
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                UX
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                AI
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                SUSTAINABILITY
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                DIGITAL
-              </div>
+              <div className="labelDesign lableForSkills">CONFERENCE</div>
+              <div className="labelDesign lableForSkills">DESIGN</div>
+              <div className="labelDesign lableForSkills">UX</div>
+              <div className="labelDesign lableForSkills">AI</div>
+              <div className="labelDesign lableForSkills">SUSTAINABILITY</div>
+              <div className="labelDesign lableForSkills">DIGITAL</div>
             </div>
 
             {/* Gallery */}
@@ -961,7 +858,10 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               Mixed Reality Fan Experience
             </h3>
-            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
+            <div
+              className="labelDesign lableForJob"
+              style={{ backgroundColor: "#130f40" }}
+            >
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
@@ -996,36 +896,13 @@ export default function VerticalTimelineComponent() {
             </ul>
 
             <div className="containerLablesForSkills">
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                MIXED REALITY
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                FAN ENGAGEMENT
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
+              <div className="labelDesign lableForSkills">MIXED REALITY</div>
+              <div className="labelDesign lableForSkills">FAN ENGAGEMENT</div>
+              <div className="labelDesign lableForSkills">
                 INTERACTIVE STADIUM
               </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                GAMEFICATION
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                AI
-              </div>
+              <div className="labelDesign lableForSkills">GAMEFICATION</div>
+              <div className="labelDesign lableForSkills">AI</div>
             </div>
 
             {/* Gallery */}
@@ -1073,7 +950,10 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               BMW M Mixed Reality
             </h3>
-            <div className="lableForJob" style={{ backgroundColor: "#2ecc71" }}>
+            <div
+              className="labelDesign lableForJob"
+              style={{ backgroundColor: "#2ecc71" }}
+            >
               SIDE JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
@@ -1111,30 +991,10 @@ export default function VerticalTimelineComponent() {
             </ul>
 
             <div className="containerLablesForSkills">
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                MIXED REALITY
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                AUTOMOTIVE
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                AI
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                INNOVATION
-              </div>
+              <div className="labelDesign lableForSkills">MIXED REALITY</div>
+              <div className="labelDesign lableForSkills">AUTOMOTIVE</div>
+              <div className="labelDesign lableForSkills">AI</div>
+              <div className="labelDesign lableForSkills">INNOVATION</div>
             </div>
 
             {/* Gallery */}
@@ -1190,7 +1050,10 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               BMW M Race Track Data Analytics & Fan Experience
             </h3>
-            <div className="lableForJob" style={{ backgroundColor: "#2ecc71" }}>
+            <div
+              className="labelDesign lableForJob"
+              style={{ backgroundColor: "#2ecc71" }}
+            >
               SIDE JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
@@ -1226,28 +1089,10 @@ export default function VerticalTimelineComponent() {
             </ul>
 
             <div className="containerLablesForSkills">
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                MOTORSPORT
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                AUTOMOTIVE
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                AI
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
+              <div className="labelDesign lableForSkills">MOTORSPORT</div>
+              <div className="labelDesign lableForSkills">AUTOMOTIVE</div>
+              <div className="labelDesign lableForSkills">AI</div>
+              <div className="labelDesign lableForSkills">
                 PATENTED TECHNOLOGY
               </div>
             </div>
@@ -1305,7 +1150,10 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               BMW M Individual Visualizer
             </h3>
-            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
+            <div
+              className="labelDesign lableForJob"
+              style={{ backgroundColor: "#130f40" }}
+            >
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
@@ -1347,36 +1195,13 @@ export default function VerticalTimelineComponent() {
             </ul>
 
             <div className="containerLablesForSkills">
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                GLOBAL ROLLOUT
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                AUTOMOTIVE
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                VISUALISATION
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
+              <div className="labelDesign lableForSkills">GLOBAL ROLLOUT</div>
+              <div className="labelDesign lableForSkills">AUTOMOTIVE</div>
+              <div className="labelDesign lableForSkills">VISUALISATION</div>
+              <div className="labelDesign lableForSkills">
                 PROCESS OPTIMIZATION
               </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                E-COMMERCE
-              </div>
+              <div className="labelDesign lableForSkills">E-COMMERCE</div>
             </div>
 
             {/* Gallery */}
@@ -1432,7 +1257,10 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               Myfarmbox.de Local Food E-Commerce
             </h3>
-            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
+            <div
+              className="labelDesign lableForJob"
+              style={{ backgroundColor: "#130f40" }}
+            >
               SIDE PROJECT
             </div>
             <h4 className="vertical-timeline-element-subtitle">Co-Founder</h4>
@@ -1467,42 +1295,12 @@ export default function VerticalTimelineComponent() {
             </ul>
 
             <div className="containerLablesForSkills">
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                E-COMMERCE
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                SUSTAINABILITY
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                STARTUP
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                DEVELOPMENT
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                LOGISTICS
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                UNTERNEHMERTUM
-              </div>
+              <div className="labelDesign lableForSkills">E-COMMERCE</div>
+              <div className="labelDesign lableForSkills">SUSTAINABILITY</div>
+              <div className="labelDesign lableForSkills">STARTUP</div>
+              <div className="labelDesign lableForSkills">DEVELOPMENT</div>
+              <div className="labelDesign lableForSkills">LOGISTICS</div>
+              <div className="labelDesign lableForSkills">UNTERNEHMERTUM</div>
             </div>
 
             {/* Gallery */}
@@ -1558,7 +1356,10 @@ export default function VerticalTimelineComponent() {
             <h3 className="vertical-timeline-element-title">
               PACINO - Sustainable Sunglasses
             </h3>
-            <div className="lableForJob" style={{ backgroundColor: "#130f40" }}>
+            <div
+              className="labelDesign lableForJob"
+              style={{ backgroundColor: "#130f40" }}
+            >
               SIDE PROJECT
             </div>
             <h4 className="vertical-timeline-element-subtitle">Co-Founder</h4>
@@ -1592,42 +1393,12 @@ export default function VerticalTimelineComponent() {
             </ul>
 
             <div className="containerLablesForSkills">
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                E-COMMERCE
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                SUSTAINABILITY
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                STARTUP
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                SHOPIFY
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                REACT.js
-              </div>
-              <div
-                className="lableForJob"
-                style={{ backgroundColor: "#485460" }}
-              >
-                UNTERNEHMERTUM
-              </div>
+              <div className="labelDesign lableForSkills">E-COMMERCE</div>
+              <div className="labelDesign lableForSkills">SUSTAINABILITY</div>
+              <div className="labelDesign lableForSkills">STARTUP</div>
+              <div className="labelDesign lableForSkills">SHOPIFY</div>
+              <div className="labelDesign lableForSkills">REACT.js</div>
+              <div className="labelDesign lableForSkills">UNTERNEHMERTUM</div>
             </div>
 
             {/* Gallery */}
