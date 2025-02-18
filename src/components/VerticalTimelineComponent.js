@@ -589,7 +589,7 @@ export default function VerticalTimelineComponent() {
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
-              Senior Digital Ecosystem Owner @Red Bull Munich
+              Senior Digital Ecosystem Owner
             </h4>
             <p>
               As part of Red Bull Basement, I contributed to a global initiative
@@ -686,7 +686,7 @@ export default function VerticalTimelineComponent() {
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
-              Senior Digital Ecosystem Owner @Red Bull Munich
+              Senior Digital Ecosystem Owner
             </h4>
             <p>
               I was invited as a speaker at the SXD (Sustainability x Digital)
@@ -792,7 +792,7 @@ export default function VerticalTimelineComponent() {
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
-              Senior Digital Ecosystem Owner @Red Bull Munich
+              Senior Digital Ecosystem Owner
             </h4>
             <p>
               I had the honor of speaking at the "DDX | Innovation & UX"
@@ -876,7 +876,7 @@ export default function VerticalTimelineComponent() {
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
-              Senior Digital Ecosystem Owner @Red Bull Munich
+              Senior Digital Ecosystem Owner
             </h4>
             <p>
               As a Project Manager, I led the development of the world's first
@@ -970,7 +970,7 @@ export default function VerticalTimelineComponent() {
               SIDE JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
-              Project Manager & Instructor @BMW M
+              Project Manager & Instructor
             </h4>
             <p>
               Together with BMW M I developed the world's first Mixed Reality
@@ -1072,7 +1072,7 @@ export default function VerticalTimelineComponent() {
               SIDE JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
-              Project Manager & Instructor @BMW M
+              Project Manager & Instructor
             </h4>
             <p>
               As a Project Manager, I collaborated with BMW M and Race Navigator
@@ -1174,7 +1174,7 @@ export default function VerticalTimelineComponent() {
               MAIN JOB
             </div>
             <h4 className="vertical-timeline-element-subtitle">
-              Project Manager @BMW M
+              Project Manager
             </h4>
             <p>
               As a Project Manager, I was responsible for the development and
