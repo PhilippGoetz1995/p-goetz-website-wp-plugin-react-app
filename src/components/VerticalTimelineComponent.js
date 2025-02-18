@@ -439,7 +439,7 @@ export default function VerticalTimelineComponent() {
               rootMargin: "0px 0px -40px 0px",
               triggerOnce: false,
             }}
-            className="vertical-timeline-element--SAPGardenDigitalEcosystem"
+            className="vertical-timeline-element SAPGardenDigitalEcosystem"
             contentStyle={{
               background: "rgb(255, 255, 255)",
               color: "rgb(0, 0, 0)",
@@ -455,14 +455,17 @@ export default function VerticalTimelineComponent() {
             icon={<BsFillRocketTakeoffFill />}
           >
             {/* Logo in top right Corner */}
-            <img
-              src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
-              className="logo-vertical-timeline-element"
-              style={{
-                width: "70px",
-              }}
-              alt="Red Bull Logo"
-            ></img>
+
+            <div className="vertical-timeline-element-logo-container">
+              <img
+                src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+                className="vertical-timeline-element-logo"
+                style={{
+                  width: "70px",
+                }}
+                alt="Red Bull Logo"
+              ></img>
+            </div>
 
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
@@ -548,7 +551,7 @@ export default function VerticalTimelineComponent() {
               rootMargin: "0px 0px -40px 0px",
               triggerOnce: false,
             }}
-            className="vertical-timeline-element--RBBasement"
+            className="vertical-timeline-element-RBBasement"
             contentStyle={{
               background: "rgb(255, 255, 255)",
               color: "rgb(0, 0, 0)",
@@ -564,14 +567,16 @@ export default function VerticalTimelineComponent() {
             icon={<BsFillMortarboardFill />}
           >
             {/* Logo in top right Corner */}
-            <img
-              src="https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Logo.png"
-              className="logo-vertical-timeline-element"
-              style={{
-                width: "70px",
-              }}
-              alt="Red Bull Basement Logo"
-            ></img>
+            <div className="vertical-timeline-element-logo-container">
+              <img
+                src="https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Logo.png"
+                className="vertical-timeline-element-logo"
+                style={{
+                  width: "70px",
+                }}
+                alt="Red Bull Basement Logo"
+              ></img>
+            </div>
 
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
@@ -659,14 +664,16 @@ export default function VerticalTimelineComponent() {
             icon={<PiPlantLight />}
           >
             {/* Logo in top right Corner */}
-            <img
-              src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
-              className="logo-vertical-timeline-element"
-              style={{
-                width: "70px",
-              }}
-              alt="Red Bull Logo"
-            ></img>
+            <div className="vertical-timeline-element-logo-container">
+              <img
+                src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+                className="vertical-timeline-element-logo"
+                style={{
+                  width: "70px",
+                }}
+                alt="Red Bull Logo"
+              ></img>
+            </div>
 
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
@@ -763,14 +770,16 @@ export default function VerticalTimelineComponent() {
             icon={<MdOutlineDesignServices />}
           >
             {/* Logo in top right Corner */}
-            <img
-              src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
-              className="logo-vertical-timeline-element"
-              style={{
-                width: "70px",
-              }}
-              alt="Red Bull Logo"
-            ></img>
+            <div className="vertical-timeline-element-logo-container">
+              <img
+                src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+                className="vertical-timeline-element-logo"
+                style={{
+                  width: "70px",
+                }}
+                alt="Red Bull Logo"
+              ></img>
+            </div>
 
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
@@ -845,14 +854,16 @@ export default function VerticalTimelineComponent() {
             icon={<TbAugmentedReality2 />}
           >
             {/* Logo in top right Corner */}
-            <img
-              src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
-              className="logo-vertical-timeline-element"
-              style={{
-                width: "70px",
-              }}
-              alt="Red Bull Logo"
-            ></img>
+            <div className="vertical-timeline-element-logo-container">
+              <img
+                src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
+                className="vertical-timeline-element-logo"
+                style={{
+                  width: "70px",
+                }}
+                alt="Red Bull Logo"
+              ></img>
+            </div>
 
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
@@ -937,14 +948,16 @@ export default function VerticalTimelineComponent() {
             icon={<BsCarFrontFill />}
           >
             {/* Logo in top right Corner */}
-            <img
-              src="https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Logo.png"
-              className="logo-vertical-timeline-element"
-              style={{
-                width: "100px",
-              }}
-              alt="BMW M Logo"
-            ></img>
+            <div className="vertical-timeline-element-logo-container">
+              <img
+                src="https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Logo.png"
+                className="vertical-timeline-element-logo"
+                style={{
+                  width: "100px",
+                }}
+                alt="BMW M Logo"
+              ></img>
+            </div>
 
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
@@ -1037,14 +1050,16 @@ export default function VerticalTimelineComponent() {
             icon={<IoAnalyticsSharp />}
           >
             {/* Logo in top right Corner */}
-            <img
-              src="https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Logo.png"
-              className="logo-vertical-timeline-element"
-              style={{
-                width: "100px",
-              }}
-              alt="BMW M Logo"
-            ></img>
+            <div className="vertical-timeline-element-logo-container">
+              <img
+                src="https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Logo.png"
+                className="vertical-timeline-element-logo"
+                style={{
+                  width: "100px",
+                }}
+                alt="BMW M Logo"
+              ></img>
+            </div>
 
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
@@ -1137,14 +1152,16 @@ export default function VerticalTimelineComponent() {
             icon={<BsGlobeAsiaAustralia />}
           >
             {/* Logo in top right Corner */}
-            <img
-              src="https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Logo.png"
-              className="logo-vertical-timeline-element"
-              style={{
-                width: "100px",
-              }}
-              alt="BMW M Logo"
-            ></img>
+            <div className="vertical-timeline-element-logo-container">
+              <img
+                src="https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Logo.png"
+                className="vertical-timeline-element-logo"
+                style={{
+                  width: "100px",
+                }}
+                alt="BMW M Logo"
+              ></img>
+            </div>
 
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
@@ -1244,15 +1261,16 @@ export default function VerticalTimelineComponent() {
             icon={<TbBasketHeart />}
           >
             {/* Logo in top right Corner */}
-            <img
-              src="https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_logo.png"
-              className="logo-vertical-timeline-element"
-              style={{
-                width: "100px",
-              }}
-              alt="Myfarmbox Logo"
-            ></img>
-
+            <div className="vertical-timeline-element-logo-container">
+              <img
+                src="https://p-goetz.de/wp-content/uploads/2025/02/Myfarmbox_logo.png"
+                className="vertical-timeline-element-logo"
+                style={{
+                  width: "100px",
+                }}
+                alt="Myfarmbox Logo"
+              ></img>
+            </div>
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
               Myfarmbox.de Local Food E-Commerce
@@ -1343,14 +1361,16 @@ export default function VerticalTimelineComponent() {
             icon={<PiPlantLight />}
           >
             {/* Logo in top right Corner */}
-            <img
-              src="https://p-goetz.de/wp-content/uploads/2025/02/PACINO_Logo.png"
-              className="logo-vertical-timeline-element"
-              style={{
-                width: "100px",
-              }}
-              alt="PACINO Logo"
-            ></img>
+            <div className="vertical-timeline-element-logo-container">
+              <img
+                src="https://p-goetz.de/wp-content/uploads/2025/02/PACINO_Logo.png"
+                className="vertical-timeline-element-logo"
+                style={{
+                  width: "100px",
+                }}
+                alt="PACINO Logo"
+              ></img>
+            </div>
 
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
