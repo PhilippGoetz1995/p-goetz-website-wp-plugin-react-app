@@ -78,6 +78,14 @@ export default function VerticalTimelineComponent() {
       [galleryRef]: currentIndex, // Update the index for the specific gallery
     }));
 
+    //If lightbox is open hide the header
+    const headerElement = document.getElementById("header-section");
+    if (showLightbox) {
+      headerElement.style.display = "none";
+    } else {
+      headerElement.style.display = "block";
+    }
+
     // The prev contains the previous state of the LightboxState
     setLightboxState((prev) => {
       // Create a copy of the previous state to ensure immutability
