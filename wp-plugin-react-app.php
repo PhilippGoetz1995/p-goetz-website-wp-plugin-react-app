@@ -41,14 +41,11 @@ function react_app_shortcode_with_script() {
 
     ob_start();
     ?>
-    <button id="load-react-app">Load React App</button>
     <div id="react-root"></div>
     <script>
         function loadReactApp() {
             if (window.reactAppLoaded) return; // Prevent multiple loads
             window.reactAppLoaded = true;
-            
-            console.log("Loading React App...");
 
             // Load CSS files
             let cssFiles = <?php echo $css_files_json; ?>;
@@ -66,7 +63,7 @@ function react_app_shortcode_with_script() {
                 script.src = file;
                 script.async = true;
                 script.onload = function() {
-                    console.log("React App script loaded: " + file);
+                    //console.log("React App script loaded: " + file);
                 };
                 document.body.appendChild(script);
             });
