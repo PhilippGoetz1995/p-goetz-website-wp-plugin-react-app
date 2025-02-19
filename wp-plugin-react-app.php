@@ -44,7 +44,12 @@ function react_app_shortcode_with_script() {
     <button id="load-react-app">Load React App</button>
     <div id="react-root"></div>
     <script>
-        document.getElementById("load-react-app").addEventListener("click", function() {
+        function loadReactApp() {
+            if (window.reactAppLoaded) return; // Prevent multiple loads
+            window.reactAppLoaded = true;
+            
+            console.log("Loading React App...");
+
             // Load CSS files
             let cssFiles = <?php echo $css_files_json; ?>;
             cssFiles.forEach(file => {
@@ -65,10 +70,7 @@ function react_app_shortcode_with_script() {
                 };
                 document.body.appendChild(script);
             });
-
-            // Hide button after loading
-            this.style.display = "none";
-        });
+        }
     </script>
     <?php
     return ob_get_clean();
