@@ -26,6 +26,7 @@ import "react-vertical-timeline-component/style.min.css";
 // Individual Lightbox
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import Video from "yet-another-react-lightbox/plugins/video";
 
 // CSS for the Gallery
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -35,13 +36,16 @@ export default function VerticalTimelineComponent() {
   const renderVideo = (item) => {
     return (
       <div className="video-wrapper">
-        <iframe
+        <video
           width="100%"
           height="100%"
-          src={item.embedUrl}
-          allowFullScreen
-          title="ex"
-        />
+          controls
+          controlsList="nodownload nofullscreen noplaybackrate"
+          disablePictureInPicture
+          onContextMenu={(e) => e.preventDefault()}
+        >
+          <source src={item.original} type="video/mp4" />
+        </video>
       </div>
     );
   };
@@ -101,27 +105,29 @@ export default function VerticalTimelineComponent() {
       return newState;
     });
 
-    // //Here i get the current slide and if it is a video i insert a video player
-    // var imageGallerySlide = galleryRefs.current[
-    //   galleryRef
-    // ].imageGallerySlideWrapper.current.querySelector(".image-gallery-slides")
-    //   .children[currentIndex];
+    //Here i get the current slide and if it is a video i insert a video player
+    var imageGallerySlide = galleryRefs.current[
+      galleryRef
+    ].imageGallerySlideWrapper.current.querySelector(".image-gallery-slides")
+      .children[currentIndex];
 
-    // //Execute only if there is a next slide
-    // if (imageGallerySlide) {
-    //   // Check if there is a video wrapper inside
-    //   var videoBoolean = imageGallerySlide.querySelector(".video-wrapper");
-    //   var fullScreenButton = galleryRefs.current[
-    //     galleryRef
-    //   ].imageGallerySlideWrapper.current.querySelector(
-    //     ".image-gallery-fullscreen-button"
-    //   );
-    //   if (videoBoolean) {
-    //     fullScreenButton.style.display = "none";
-    //   } else {
-    //     fullScreenButton.style.display = "block";
-    //   }
-    // }
+    //Execute only if there is a next slide
+    if (imageGallerySlide) {
+      // Check if there is a video wrapper inside
+      var videoBoolean = imageGallerySlide.querySelector(".video-wrapper");
+      var fullScreenButton = galleryRefs.current[
+        galleryRef
+      ].imageGallerySlideWrapper.current.querySelector(
+        ".galleryFullScreenIcon"
+      );
+      if (videoBoolean) {
+        fullScreenButton.style.marginTop = "-65px";
+        fullScreenButton.style.marginRight = "-3px";
+      } else {
+        fullScreenButton.style.marginTop = "-45px";
+        fullScreenButton.style.right = "10px";
+      }
+    }
   };
 
   // Disable the key left and right because it is interferring with other gallerys
@@ -199,14 +205,12 @@ export default function VerticalTimelineComponent() {
       loading: "lazy",
     },
     {
-      embedUrl:
-        "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video1.mp4",
       original:
-        "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video_Thumbnail_PlayButton.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video1.mp4",
       thumbnail:
         "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_Video_Thumbnail_PlayButton.jpg",
+      type: "video",
       renderItem: renderVideo.bind(this),
-      name: "VideoItem",
     },
     {
       original: "https://p-goetz.de/wp-content/uploads/2024/12/BMW_MMR_04.jpg",
@@ -267,12 +271,11 @@ export default function VerticalTimelineComponent() {
     },
 
     {
-      embedUrl:
-        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Video.mp4",
       original:
-        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Video_Thubnail.jpg",
+        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Video.mp4",
       thumbnail:
         "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_Video_Thubnail.jpg",
+      type: "video",
       renderItem: renderVideo.bind(this),
     },
     {
@@ -322,12 +325,11 @@ export default function VerticalTimelineComponent() {
     },
 
     {
-      embedUrl:
-        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_Video.mp4",
       original:
-        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_Video_Thumbnail.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_Video.mp4",
       thumbnail:
         "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_Video_Thumbnail.jpg",
+      type: "video",
       renderItem: renderVideo.bind(this),
     },
     {
@@ -746,8 +748,25 @@ export default function VerticalTimelineComponent() {
             <Lightbox
               open={lightboxState["gallery_RBBasement"] || false}
               close={() => handleGallery("gallery_RBBasement", false)}
-              slides={gallery_RBBasement.map((img) => ({ src: img.original }))}
               index={lightboxIndexes["gallery_RBBasement"]}
+              plugins={[Video]}
+              slides={gallery_RBBasement.map((item) => {
+                if (item.original.endsWith(".mp4")) {
+                  return {
+                    type: "video",
+                    sources: [{ src: item.original, type: "video/mp4" }],
+                    poster: item.thumbnail, // Thumbnail for video preview
+                    width: 1280,
+                  };
+                }
+                return { src: item.original }; // Default for images
+              })}
+              video={{
+                controls: true,
+                disablePictureInPicture: true,
+                disableRemotePlayback: true,
+                controlsList: "nodownload nofullscreen noplaybackrate",
+              }}
             />
           </VerticalTimelineElement>
 
@@ -857,8 +876,25 @@ export default function VerticalTimelineComponent() {
             <Lightbox
               open={lightboxState["gallery_SXD"] || false}
               close={() => handleGallery("gallery_SXD", false)}
-              slides={gallery_SXD.map((img) => ({ src: img.original }))}
               index={lightboxIndexes["gallery_SXD"]}
+              plugins={[Video]}
+              slides={gallery_SXD.map((item) => {
+                if (item.original.endsWith(".mp4")) {
+                  return {
+                    type: "video",
+                    sources: [{ src: item.original, type: "video/mp4" }],
+                    poster: item.thumbnail, // Thumbnail for video preview
+                    width: 1280,
+                  };
+                }
+                return { src: item.original }; // Default for images
+              })}
+              video={{
+                controls: true,
+                disablePictureInPicture: true,
+                disableRemotePlayback: true,
+                controlsList: "nodownload nofullscreen noplaybackrate",
+              }}
             />
           </VerticalTimelineElement>
 
@@ -947,8 +983,25 @@ export default function VerticalTimelineComponent() {
             <Lightbox
               open={lightboxState["gallery_DDX"] || false}
               close={() => handleGallery("gallery_DDX", false)}
-              slides={gallery_DDX.map((img) => ({ src: img.original }))}
               index={lightboxIndexes["gallery_DDX"]}
+              plugins={[Video]}
+              slides={gallery_DDX.map((item) => {
+                if (item.original.endsWith(".mp4")) {
+                  return {
+                    type: "video",
+                    sources: [{ src: item.original, type: "video/mp4" }],
+                    poster: item.thumbnail, // Thumbnail for video preview
+                    width: 1280,
+                  };
+                }
+                return { src: item.original }; // Default for images
+              })}
+              video={{
+                controls: true,
+                disablePictureInPicture: true,
+                disableRemotePlayback: true,
+                controlsList: "nodownload nofullscreen noplaybackrate",
+              }}
             />
           </VerticalTimelineElement>
 
@@ -1055,10 +1108,25 @@ export default function VerticalTimelineComponent() {
             <Lightbox
               open={lightboxState["gallery_RBMixedReality"] || false}
               close={() => handleGallery("gallery_RBMixedReality", false)}
-              slides={gallery_RBMixedReality.map((img) => ({
-                src: img.original,
-              }))}
               index={lightboxIndexes["gallery_RBMixedReality"]}
+              plugins={[Video]}
+              slides={gallery_RBMixedReality.map((item) => {
+                if (item.original.endsWith(".mp4")) {
+                  return {
+                    type: "video",
+                    sources: [{ src: item.original, type: "video/mp4" }],
+                    poster: item.thumbnail, // Thumbnail for video preview
+                    width: 1280,
+                  };
+                }
+                return { src: item.original }; // Default for images
+              })}
+              video={{
+                controls: true,
+                disablePictureInPicture: true,
+                disableRemotePlayback: true,
+                controlsList: "nodownload nofullscreen noplaybackrate",
+              }}
             />
           </VerticalTimelineElement>
 
@@ -1165,8 +1233,25 @@ export default function VerticalTimelineComponent() {
             <Lightbox
               open={lightboxState["gallery_BMW_MMR"] || false}
               close={() => handleGallery("gallery_BMW_MMR", false)}
-              slides={gallery_BMW_MMR.map((img) => ({ src: img.original }))}
               index={lightboxIndexes["gallery_BMW_MMR"]}
+              plugins={[Video]}
+              slides={gallery_BMW_MMR.map((item) => {
+                if (item.original.endsWith(".mp4")) {
+                  return {
+                    type: "video",
+                    sources: [{ src: item.original, type: "video/mp4" }],
+                    poster: item.thumbnail, // Thumbnail for video preview
+                    width: 1280,
+                  };
+                }
+                return { src: item.original }; // Default for images
+              })}
+              video={{
+                controls: true,
+                disablePictureInPicture: true,
+                disableRemotePlayback: true,
+                controlsList: "nodownload nofullscreen noplaybackrate",
+              }}
             />
           </VerticalTimelineElement>
 
@@ -1273,8 +1358,25 @@ export default function VerticalTimelineComponent() {
             <Lightbox
               open={lightboxState["gallery_BMW_RN"] || false}
               close={() => handleGallery("gallery_BMW_RN", false)}
-              slides={gallery_BMW_RN.map((img) => ({ src: img.original }))}
               index={lightboxIndexes["gallery_BMW_RN"]}
+              plugins={[Video]}
+              slides={gallery_BMW_RN.map((item) => {
+                if (item.original.endsWith(".mp4")) {
+                  return {
+                    type: "video",
+                    sources: [{ src: item.original, type: "video/mp4" }],
+                    poster: item.thumbnail, // Thumbnail for video preview
+                    width: 1280,
+                  };
+                }
+                return { src: item.original }; // Default for images
+              })}
+              video={{
+                controls: true,
+                disablePictureInPicture: true,
+                disableRemotePlayback: true,
+                controlsList: "nodownload nofullscreen noplaybackrate",
+              }}
             />
           </VerticalTimelineElement>
 
@@ -1388,10 +1490,25 @@ export default function VerticalTimelineComponent() {
             <Lightbox
               open={lightboxState["gallery_BMW_Visualizer"] || false}
               close={() => handleGallery("gallery_BMW_Visualizer", false)}
-              slides={gallery_BMW_Visualizer.map((img) => ({
-                src: img.original,
-              }))}
               index={lightboxIndexes["gallery_BMW_Visualizer"]}
+              plugins={[Video]}
+              slides={gallery_BMW_Visualizer.map((item) => {
+                if (item.original.endsWith(".mp4")) {
+                  return {
+                    type: "video",
+                    sources: [{ src: item.original, type: "video/mp4" }],
+                    poster: item.thumbnail, // Thumbnail for video preview
+                    width: 1280,
+                  };
+                }
+                return { src: item.original }; // Default for images
+              })}
+              video={{
+                controls: true,
+                disablePictureInPicture: true,
+                disableRemotePlayback: true,
+                controlsList: "nodownload nofullscreen noplaybackrate",
+              }}
             />
           </VerticalTimelineElement>
 
@@ -1497,8 +1614,25 @@ export default function VerticalTimelineComponent() {
             <Lightbox
               open={lightboxState["gallery_Myfarmbox"] || false}
               close={() => handleGallery("gallery_Myfarmbox", false)}
-              slides={gallery_Myfarmbox.map((img) => ({ src: img.original }))}
               index={lightboxIndexes["gallery_Myfarmbox"]}
+              plugins={[Video]}
+              slides={gallery_Myfarmbox.map((item) => {
+                if (item.original.endsWith(".mp4")) {
+                  return {
+                    type: "video",
+                    sources: [{ src: item.original, type: "video/mp4" }],
+                    poster: item.thumbnail, // Thumbnail for video preview
+                    width: 1280,
+                  };
+                }
+                return { src: item.original }; // Default for images
+              })}
+              video={{
+                controls: true,
+                disablePictureInPicture: true,
+                disableRemotePlayback: true,
+                controlsList: "nodownload nofullscreen noplaybackrate",
+              }}
             />
           </VerticalTimelineElement>
 
@@ -1603,8 +1737,25 @@ export default function VerticalTimelineComponent() {
             <Lightbox
               open={lightboxState["gallery_PACINO"] || false}
               close={() => handleGallery("gallery_PACINO", false)}
-              slides={gallery_PACINO.map((img) => ({ src: img.original }))}
               index={lightboxIndexes["gallery_PACINO"]}
+              plugins={[Video]}
+              slides={gallery_PACINO.map((item) => {
+                if (item.original.endsWith(".mp4")) {
+                  return {
+                    type: "video",
+                    sources: [{ src: item.original, type: "video/mp4" }],
+                    poster: item.thumbnail, // Thumbnail for video preview
+                    width: 1280,
+                  };
+                }
+                return { src: item.original }; // Default for images
+              })}
+              video={{
+                controls: true,
+                disablePictureInPicture: true,
+                disableRemotePlayback: true,
+                controlsList: "nodownload nofullscreen noplaybackrate",
+              }}
             />
           </VerticalTimelineElement>
 
