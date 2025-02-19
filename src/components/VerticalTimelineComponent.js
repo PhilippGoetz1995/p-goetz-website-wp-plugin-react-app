@@ -609,7 +609,6 @@ export default function VerticalTimelineComponent() {
               </li>
             </ul>
             <div className="containerLablesForSkills">
-              <div className="labelDesign lableForSkills">AGILE WORK</div>
               <div className="labelDesign lableForSkills">TEAM MANAGEMENT</div>
               <div className="labelDesign lableForSkills">CO-INNOVATION</div>
               <div className="labelDesign lableForSkills">DATA ANALYTICS</div>
@@ -1686,7 +1685,7 @@ export default function VerticalTimelineComponent() {
             </div>
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
-              PACINO - Sustainable Sunglasses
+              Sustainable Sunglasses
             </h3>
             <div
               className="labelDesign lableForJob"
