@@ -47,21 +47,61 @@ export default function VerticalTimelineComponent() {
   //Create an array of gallery references
   const galleryRefs = useRef([]);
 
-  // Show and hide the Fullscreen Button for the gallery => Video Section
-  const handleSlideChange = (galleryRefIndex) => {
-    if (galleryRefs.current[galleryRefIndex]) {
-      var currentIndex = galleryRefs.current[galleryRefIndex].getCurrentIndex();
-    }
+  //Creating an array of states
+  const [lightboxState, setLightboxState] = useState({});
+  const [galleryIndexes, setGalleryIndexes] = useState({});
+  const [lightboxIndexes, setLightboxIndexes] = useState({});
 
-    // TODO Slide of the Lightbox is not aligned with the Gallery
-    //setLightboxIndex1(currentIndex);
+  const handleGallery = (galleryRef, showLightbox) => {
+    /* This function is handling the slide control but also the lighbox control
+    1. It gets the current slide index and store it in LightboxIndex which will be used in the Lightbox as Start Image
+    2. I set the Indexes for the gallery and for the lightbox
+    3. It will be checked if Lightbox should be shown or not
+    4. I check if it is a Video slide and hide or show the Fullscreen button
+    */
 
-    const newIndex = currentIndex + 1;
-    galleryRefs.current[galleryRefIndex].slideToIndex(newIndex);
+    const currentIndex = galleryRefs.current[galleryRef]?.getCurrentIndex();
+
+    setLightboxIndexes((prev) => ({
+      ...prev,
+      [galleryRef]: currentIndex, // Store the index of the clicked image
+    }));
+
+    setGalleryIndexes((prev) => ({
+      ...prev,
+      [galleryRef]: currentIndex, // Update the index for the specific gallery
+    }));
+
+    // The prev contains the previous state of the LightboxState
+    setLightboxState((prev) => {
+      // Create a copy of the previous state to ensure immutability
+      const newState = { ...prev };
+
+      // Option to print an array in a readable way
+      //console.table(newState);
+
+      // If openState is explicitly provided (true or false), use that value
+      if (showLightbox !== undefined) {
+        newState[galleryRef] = showLightbox;
+      } else {
+        // If openState is not provided, determine the new state value
+        // Check if the galleryRefIndex exists in the previous state
+        if (prev.hasOwnProperty(galleryRef)) {
+          // If it exists, toggle the current state value
+          newState[galleryRef] = showLightbox;
+        } else {
+          // If the key does not exist in the previous state, set it to true by default
+          newState[galleryRef] = true;
+        }
+      }
+
+      // Return the updated state so that it will be saved in "setLightboxState"
+      return newState;
+    });
 
     //Here i get the current slide and if it is a video i insert a video player
     var imageGallerySlide = galleryRefs.current[
-      galleryRefIndex
+      galleryRef
     ].imageGallerySlideWrapper.current.querySelector(".image-gallery-slides")
       .children[currentIndex];
 
@@ -70,7 +110,7 @@ export default function VerticalTimelineComponent() {
       // Check if there is a video wrapper inside
       var videoBoolean = imageGallerySlide.querySelector(".video-wrapper");
       var fullScreenButton = galleryRefs.current[
-        galleryRefIndex
+        galleryRef
       ].imageGallerySlideWrapper.current.querySelector(
         ".image-gallery-fullscreen-button"
       );
@@ -80,22 +120,6 @@ export default function VerticalTimelineComponent() {
         fullScreenButton.style.display = "block";
       }
     }
-  };
-
-  const [isOpen1, setIsOpen1] = useState(false);
-  const [isOpen2, setIsOpen2] = useState(false);
-
-  const [lightboxIndex1, setLightboxIndex1] = useState(0);
-  const [lightboxIndex2, setLightboxIndex2] = useState(0);
-
-  const handleCustomFullscreen1 = (index) => {
-    setLightboxIndex1(index);
-    setIsOpen1(true);
-  };
-
-  const handleCustomFullscreen2 = (index) => {
-    setLightboxIndex2(index);
-    setIsOpen2(true);
   };
 
   // Disable the key left and right because it is interferring with other gallerys
@@ -456,7 +480,6 @@ export default function VerticalTimelineComponent() {
             icon={<BsFillRocketTakeoffFill />}
           >
             {/* Logo in top right Corner */}
-
             <div className="vertical-timeline-element-logo-container">
               <img
                 src="https://p-goetz.de/wp-content/uploads/2024/12/RedBull_Logo.jpg"
@@ -467,7 +490,6 @@ export default function VerticalTimelineComponent() {
                 alt="Red Bull Logo"
               ></img>
             </div>
-
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
               SAP Garden Digital Ecosystem
@@ -518,7 +540,6 @@ export default function VerticalTimelineComponent() {
                 principles throughout the project lifecycle.
               </li>
             </ul>
-
             <div className="containerLablesForSkills">
               <div className="labelDesign lableForSkills">AGILE WORK</div>
               <div className="labelDesign lableForSkills">LEADERSHIP</div>
@@ -527,22 +548,26 @@ export default function VerticalTimelineComponent() {
               <div className="labelDesign lableForSkills">DATA ANALYTICS</div>
               <div className="labelDesign lableForSkills">CI/CD</div>
             </div>
-
             {/* Gallery */}
+            {/* I get via "el" the current element and save it then in the array of refferences/states */}
+
             <ImageGallery
+              showPlayButton={false}
               items={gallery_SAPGDP}
               ref={(el) => (galleryRefs.current["gallery_SAPGDP"] = el)}
-              onSlide={() => handleSlideChange("gallery_SAPGDP")}
-              onClick={() => handleCustomFullscreen1(lightboxIndex1)}
-              showPlayButton={false}
+              startIndex={galleryIndexes["gallery_SAPGDP"] || 0}
+              onClick={() => {
+                handleGallery("gallery_SAPGDP", true);
+              }}
+              onSlide={() => handleGallery("gallery_SAPGDP", false)}
             />
 
+            {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
-              open={isOpen1}
-              close={() => setIsOpen1(false)}
+              open={lightboxState["gallery_SAPGDP"] || false}
+              close={() => handleGallery("gallery_SAPGDP", false)}
               slides={gallery_SAPGDP.map((img) => ({ src: img.original }))}
-              index={lightboxIndex1}
-              onIndexChange={setLightboxIndex1}
+              index={lightboxIndexes["gallery_SAPGDP"]}
             />
           </VerticalTimelineElement>
 
@@ -635,11 +660,22 @@ export default function VerticalTimelineComponent() {
 
             {/* Gallery */}
             <ImageGallery
+              showPlayButton={false}
               items={gallery_RBBasement}
               ref={(el) => (galleryRefs.current["gallery_RBBasement"] = el)}
-              onSlide={() => handleSlideChange("gallery_RBBasement")}
-              showVideo={renderVideo}
-              showPlayButton={false}
+              startIndex={galleryIndexes["gallery_RBBasement"] || 0}
+              onClick={() => {
+                handleGallery("gallery_RBBasement", true);
+              }}
+              onSlide={() => handleGallery("gallery_RBBasement", false)}
+            />
+
+            {/* The lightboxState is initially not set therefore should be false if not already once open */}
+            <Lightbox
+              open={lightboxState["gallery_RBBasement"] || false}
+              close={() => handleGallery("gallery_RBBasement", false)}
+              slides={gallery_RBBasement.map((img) => ({ src: img.original }))}
+              index={lightboxIndexes["gallery_RBBasement"]}
             />
           </VerticalTimelineElement>
 
@@ -675,7 +711,6 @@ export default function VerticalTimelineComponent() {
                 alt="Red Bull Logo"
               ></img>
             </div>
-
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
               Speaker @SXD - Sustainability x Digital
@@ -697,7 +732,6 @@ export default function VerticalTimelineComponent() {
               sustainability, highlighting how businesses can integrate
               tech-driven approaches to create measurable environmental change.
             </p>
-
             <ul>
               <li>
                 💡 <b>Explored tech-driven sustainability strategies:</b>
@@ -721,7 +755,6 @@ export default function VerticalTimelineComponent() {
                 and impactful idea exchange.
               </li>
             </ul>
-
             <div className="containerLablesForSkills">
               <div className="labelDesign lableForSkills">CONFERENCE</div>
               <div className="labelDesign lableForSkills">DIGITAL</div>
@@ -730,22 +763,23 @@ export default function VerticalTimelineComponent() {
               <div className="labelDesign lableForSkills">SUSTAINABILITY</div>
               <div className="labelDesign lableForSkills">GREEN TECH</div>
             </div>
-
             {/* Gallery */}
             <ImageGallery
+              showPlayButton={false}
               items={gallery_SXD}
               ref={(el) => (galleryRefs.current["gallery_SXD"] = el)}
-              onSlide={() => handleSlideChange("gallery_SXD")}
-              onClick={() => handleCustomFullscreen1(lightboxIndex1)}
-              showPlayButton={false}
+              startIndex={galleryIndexes["gallery_SXD"] || 0}
+              onClick={() => {
+                handleGallery("gallery_SXD", true);
+              }}
+              onSlide={() => handleGallery("gallery_SXD", false)}
             />
-
+            {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
-              open={isOpen1}
-              close={() => setIsOpen1(false)}
-              slides={gallery_SAPGDP.map((img) => ({ src: img.original }))}
-              index={lightboxIndex1}
-              onIndexChange={setLightboxIndex1}
+              open={lightboxState["gallery_SXD"] || false}
+              close={() => handleGallery("gallery_SXD", false)}
+              slides={gallery_SXD.map((img) => ({ src: img.original }))}
+              index={lightboxIndexes["gallery_SXD"]}
             />
           </VerticalTimelineElement>
 
@@ -781,7 +815,6 @@ export default function VerticalTimelineComponent() {
                 alt="Red Bull Logo"
               ></img>
             </div>
-
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
               Speaker @DDX - Innovation & UX Conference
@@ -805,7 +838,6 @@ export default function VerticalTimelineComponent() {
               and innovation, helping to shape discussions on the future of
               digital product development.
             </p>
-
             <div className="containerLablesForSkills">
               <div className="labelDesign lableForSkills">CONFERENCE</div>
               <div className="labelDesign lableForSkills">DESIGN</div>
@@ -814,22 +846,23 @@ export default function VerticalTimelineComponent() {
               <div className="labelDesign lableForSkills">SUSTAINABILITY</div>
               <div className="labelDesign lableForSkills">DIGITAL</div>
             </div>
-
             {/* Gallery */}
             <ImageGallery
+              showPlayButton={false}
               items={gallery_DDX}
               ref={(el) => (galleryRefs.current["gallery_DDX"] = el)}
-              onSlide={() => handleSlideChange("gallery_DDX")}
-              onClick={() => handleCustomFullscreen1(lightboxIndex1)}
-              showPlayButton={false}
+              startIndex={galleryIndexes["gallery_DDX"] || 0}
+              onClick={() => {
+                handleGallery("gallery_DDX", true);
+              }}
+              onSlide={() => handleGallery("gallery_DDX", false)}
             />
-
+            {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
-              open={isOpen1}
-              close={() => setIsOpen1(false)}
-              slides={gallery_SAPGDP.map((img) => ({ src: img.original }))}
-              index={lightboxIndex1}
-              onIndexChange={setLightboxIndex1}
+              open={lightboxState["gallery_DDX"] || false}
+              close={() => handleGallery("gallery_DDX", false)}
+              slides={gallery_DDX.map((img) => ({ src: img.original }))}
+              index={lightboxIndexes["gallery_DDX"]}
             />
           </VerticalTimelineElement>
 
@@ -865,7 +898,6 @@ export default function VerticalTimelineComponent() {
                 alt="Red Bull Logo"
               ></img>
             </div>
-
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
               Mixed Reality Fan Experience
@@ -906,7 +938,6 @@ export default function VerticalTimelineComponent() {
                 benchmark for stadium entertainment.
               </li>
             </ul>
-
             <div className="containerLablesForSkills">
               <div className="labelDesign lableForSkills">MIXED REALITY</div>
               <div className="labelDesign lableForSkills">FAN ENGAGEMENT</div>
@@ -916,14 +947,25 @@ export default function VerticalTimelineComponent() {
               <div className="labelDesign lableForSkills">GAMEFICATION</div>
               <div className="labelDesign lableForSkills">AI</div>
             </div>
-
             {/* Gallery */}
             <ImageGallery
+              showPlayButton={false}
               items={gallery_RBMixedReality}
               ref={(el) => (galleryRefs.current["gallery_RBMixedReality"] = el)}
-              onSlide={() => handleSlideChange("gallery_RBMixedReality")}
-              showVideo={renderVideo}
-              showPlayButton={false}
+              startIndex={galleryIndexes["gallery_RBMixedReality"] || 0}
+              onClick={() => {
+                handleGallery("gallery_RBMixedReality", true);
+              }}
+              onSlide={() => handleGallery("gallery_RBMixedReality", false)}
+            />
+            {/* The lightboxState is initially not set therefore should be false if not already once open */}
+            <Lightbox
+              open={lightboxState["gallery_RBMixedReality"] || false}
+              close={() => handleGallery("gallery_RBMixedReality", false)}
+              slides={gallery_RBMixedReality.map((img) => ({
+                src: img.original,
+              }))}
+              index={lightboxIndexes["gallery_RBMixedReality"]}
             />
           </VerticalTimelineElement>
 
@@ -959,7 +1001,6 @@ export default function VerticalTimelineComponent() {
                 alt="BMW M Logo"
               ></img>
             </div>
-
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
               BMW M Mixed Reality
@@ -1003,29 +1044,29 @@ export default function VerticalTimelineComponent() {
                 environment.
               </li>
             </ul>
-
             <div className="containerLablesForSkills">
               <div className="labelDesign lableForSkills">MIXED REALITY</div>
               <div className="labelDesign lableForSkills">AUTOMOTIVE</div>
               <div className="labelDesign lableForSkills">AI</div>
               <div className="labelDesign lableForSkills">INNOVATION</div>
             </div>
-
             {/* Gallery */}
             <ImageGallery
+              showPlayButton={false}
               items={gallery_BMW_MMR}
               ref={(el) => (galleryRefs.current["gallery_BMW_MMR"] = el)}
-              onSlide={() => handleSlideChange("gallery_BMW_MMR")}
-              showVideo={renderVideo}
-              showPlayButton={false}
-              onClick={() => handleCustomFullscreen2(lightboxIndex2)}
+              startIndex={galleryIndexes["gallery_BMW_MMR"] || 0}
+              onClick={() => {
+                handleGallery("gallery_BMW_MMR", true);
+              }}
+              onSlide={() => handleGallery("gallery_BMW_MMR", false)}
             />
+            {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
-              open={isOpen2}
-              close={() => setIsOpen2(false)}
+              open={lightboxState["gallery_BMW_MMR"] || false}
+              close={() => handleGallery("gallery_BMW_MMR", false)}
               slides={gallery_BMW_MMR.map((img) => ({ src: img.original }))}
-              index={lightboxIndex2}
-              onIndexChange={setLightboxIndex2}
+              index={lightboxIndexes["gallery_BMW_MMR"]}
             />
           </VerticalTimelineElement>
 
@@ -1061,7 +1102,6 @@ export default function VerticalTimelineComponent() {
                 alt="BMW M Logo"
               ></img>
             </div>
-
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
               BMW M Race Track Data Analytics & Fan Experience
@@ -1103,7 +1143,6 @@ export default function VerticalTimelineComponent() {
                 accuracy & real-time processing environment.
               </li>
             </ul>
-
             <div className="containerLablesForSkills">
               <div className="labelDesign lableForSkills">MOTORSPORT</div>
               <div className="labelDesign lableForSkills">AUTOMOTIVE</div>
@@ -1112,22 +1151,23 @@ export default function VerticalTimelineComponent() {
                 PATENTED TECHNOLOGY
               </div>
             </div>
-
             {/* Gallery */}
             <ImageGallery
+              showPlayButton={false}
               items={gallery_BMW_RN}
               ref={(el) => (galleryRefs.current["gallery_BMW_RN"] = el)}
-              onSlide={() => handleSlideChange("gallery_BMW_RN")}
-              showVideo={renderVideo}
-              showPlayButton={false}
-              onClick={() => handleCustomFullscreen2(lightboxIndex2)}
+              startIndex={galleryIndexes["gallery_BMW_RN"] || 0}
+              onClick={() => {
+                handleGallery("gallery_BMW_RN", true);
+              }}
+              onSlide={() => handleGallery("gallery_BMW_RN", false)}
             />
+            {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
-              open={isOpen2}
-              close={() => setIsOpen2(false)}
-              slides={gallery_BMW_MMR.map((img) => ({ src: img.original }))}
-              index={lightboxIndex2}
-              onIndexChange={setLightboxIndex2}
+              open={lightboxState["gallery_BMW_RN"] || false}
+              close={() => handleGallery("gallery_BMW_RN", false)}
+              slides={gallery_BMW_RN.map((img) => ({ src: img.original }))}
+              index={lightboxIndexes["gallery_BMW_RN"]}
             />
           </VerticalTimelineElement>
 
@@ -1163,7 +1203,6 @@ export default function VerticalTimelineComponent() {
                 alt="BMW M Logo"
               ></img>
             </div>
-
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
               BMW M Individual Visualizer
@@ -1211,7 +1250,6 @@ export default function VerticalTimelineComponent() {
                 Setting a new industry benchmark
               </li>
             </ul>
-
             <div className="containerLablesForSkills">
               <div className="labelDesign lableForSkills">GLOBAL ROLLOUT</div>
               <div className="labelDesign lableForSkills">AUTOMOTIVE</div>
@@ -1221,22 +1259,25 @@ export default function VerticalTimelineComponent() {
               </div>
               <div className="labelDesign lableForSkills">E-COMMERCE</div>
             </div>
-
             {/* Gallery */}
             <ImageGallery
+              showPlayButton={false}
               items={gallery_BMW_Visualizer}
               ref={(el) => (galleryRefs.current["gallery_BMW_Visualizer"] = el)}
-              onSlide={() => handleSlideChange("gallery_BMW_Visualizer")}
-              showVideo={renderVideo}
-              showPlayButton={false}
-              onClick={() => handleCustomFullscreen2(lightboxIndex2)}
+              startIndex={galleryIndexes["gallery_BMW_Visualizer"] || 0}
+              onClick={() => {
+                handleGallery("gallery_BMW_Visualizer", true);
+              }}
+              onSlide={() => handleGallery("gallery_BMW_Visualizer", false)}
             />
+            {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
-              open={isOpen2}
-              close={() => setIsOpen2(false)}
-              slides={gallery_BMW_MMR.map((img) => ({ src: img.original }))}
-              index={lightboxIndex2}
-              onIndexChange={setLightboxIndex2}
+              open={lightboxState["gallery_BMW_Visualizer"] || false}
+              close={() => handleGallery("gallery_BMW_Visualizer", false)}
+              slides={gallery_BMW_Visualizer.map((img) => ({
+                src: img.original,
+              }))}
+              index={lightboxIndexes["gallery_BMW_Visualizer"]}
             />
           </VerticalTimelineElement>
 
@@ -1312,7 +1353,6 @@ export default function VerticalTimelineComponent() {
                 Made local food accessible again
               </li>
             </ul>
-
             <div className="containerLablesForSkills">
               <div className="labelDesign lableForSkills">E-COMMERCE</div>
               <div className="labelDesign lableForSkills">SUSTAINABILITY</div>
@@ -1321,22 +1361,23 @@ export default function VerticalTimelineComponent() {
               <div className="labelDesign lableForSkills">LOGISTICS</div>
               <div className="labelDesign lableForSkills">UNTERNEHMERTUM</div>
             </div>
-
             {/* Gallery */}
             <ImageGallery
+              showPlayButton={false}
               items={gallery_Myfarmbox}
               ref={(el) => (galleryRefs.current["gallery_Myfarmbox"] = el)}
-              onSlide={() => handleSlideChange("gallery_Myfarmbox")}
-              showVideo={renderVideo}
-              showPlayButton={false}
-              onClick={() => handleCustomFullscreen2(lightboxIndex2)}
+              startIndex={galleryIndexes["gallery_Myfarmbox"] || 0}
+              onClick={() => {
+                handleGallery("gallery_Myfarmbox", true);
+              }}
+              onSlide={() => handleGallery("gallery_Myfarmbox", false)}
             />
+            {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
-              open={isOpen2}
-              close={() => setIsOpen2(false)}
-              slides={gallery_BMW_MMR.map((img) => ({ src: img.original }))}
-              index={lightboxIndex2}
-              onIndexChange={setLightboxIndex2}
+              open={lightboxState["gallery_Myfarmbox"] || false}
+              close={() => handleGallery("gallery_Myfarmbox", false)}
+              slides={gallery_Myfarmbox.map((img) => ({ src: img.original }))}
+              index={lightboxIndexes["gallery_Myfarmbox"]}
             />
           </VerticalTimelineElement>
 
@@ -1372,7 +1413,6 @@ export default function VerticalTimelineComponent() {
                 alt="PACINO Logo"
               ></img>
             </div>
-
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
               PACINO - Sustainable Sunglasses
@@ -1412,7 +1452,6 @@ export default function VerticalTimelineComponent() {
                 Integrating sustainability into branding & storytelling
               </li>
             </ul>
-
             <div className="containerLablesForSkills">
               <div className="labelDesign lableForSkills">E-COMMERCE</div>
               <div className="labelDesign lableForSkills">SUSTAINABILITY</div>
@@ -1421,22 +1460,23 @@ export default function VerticalTimelineComponent() {
               <div className="labelDesign lableForSkills">REACT.js</div>
               <div className="labelDesign lableForSkills">UNTERNEHMERTUM</div>
             </div>
-
             {/* Gallery */}
             <ImageGallery
+              showPlayButton={false}
               items={gallery_PACINO}
               ref={(el) => (galleryRefs.current["gallery_PACINO"] = el)}
-              onSlide={() => handleSlideChange("gallery_PACINO")}
-              showVideo={renderVideo}
-              showPlayButton={false}
-              onClick={() => handleCustomFullscreen2(lightboxIndex2)}
+              startIndex={galleryIndexes["gallery_PACINO"] || 0}
+              onClick={() => {
+                handleGallery("gallery_PACINO", true);
+              }}
+              onSlide={() => handleGallery("gallery_PACINO", false)}
             />
+            {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
-              open={isOpen2}
-              close={() => setIsOpen2(false)}
-              slides={gallery_BMW_MMR.map((img) => ({ src: img.original }))}
-              index={lightboxIndex2}
-              onIndexChange={setLightboxIndex2}
+              open={lightboxState["gallery_PACINO"] || false}
+              close={() => handleGallery("gallery_PACINO", false)}
+              slides={gallery_PACINO.map((img) => ({ src: img.original }))}
+              index={lightboxIndexes["gallery_PACINO"]}
             />
           </VerticalTimelineElement>
 
