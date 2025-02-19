@@ -1,5 +1,51 @@
 /* BACKUP WORDPRESS STYLING STAND 18.02.2025 */
 
+#projects-section {
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+}
+
+.wpb_content_element {
+  margin-bottom: 0px !important;
+}
+
+/* Individual Styling for Vertical Timeline */
+.vertical-timeline {
+  max-width: 1700px !important;
+}
+
+.vertical-timeline-element-date {
+  color: white;
+}
+
+.vertical-timeline-element-content p {
+  font-size: 14px !important;
+  font-weight: inherit !important;
+  margin-top: 7px !important;
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-content {
+    width: 46% !important;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns
+    .vertical-timeline-element:nth-child(even)
+    .vertical-timeline-element-content
+    .vertical-timeline-element-date {
+    right: 115% !important;
+  }
+
+  .vertical-timeline--two-columns
+    .vertical-timeline-element:nth-child(odd)
+    .vertical-timeline-element-content
+    .vertical-timeline-element-date {
+    left: 115% !important;
+  }
+}
+
 ul {
   margin-left: 25px !important;
   margin-top: 6px !important;
@@ -36,7 +82,7 @@ ul {
 
 .containerLablesForSkills {
   width: 100%;
-  height: 50px;
+  overflow: hidden;
 }
 
 .labelDesign {
@@ -63,11 +109,15 @@ ul {
 
 .lableForSkills {
   margin-top: 4px;
-  margin-right: 8px;
+  margin-right: 4px;
   background-color: #485460;
 }
 
 /* Styling for gallery in Vertical Timeline */
+
+.image-gallery {
+  margin-top: 10px;
+}
 
 .image-gallery-thumbnail img {
   object-fit: cover;
@@ -93,12 +143,18 @@ ul {
   h3 {
     font-size: 18px;
     line-height: 20px;
+    margin-top: 12px !important;
   }
 
   h4 {
     font-size: 13px;
     line-height: 23px;
     padding-top: 2px;
+  }
+
+  .vertical-timeline-element-date {
+    color: black !important;
+    padding-bottom: 0px !important;
   }
 
   .vertical-timeline-element-logo-container {
@@ -111,6 +167,10 @@ ul {
   }
 
   .lableForJob {
+    font-size: 9px;
+  }
+
+  .lableForSkills {
     font-size: 9px;
   }
 
