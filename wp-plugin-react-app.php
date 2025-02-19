@@ -9,7 +9,7 @@
 * Description:     React App Integration via Shortcode (Lazy Load)
 * Author:          Philipp Goetz
 * Author URL:      https://p-goetz.de
-* Version:         0.14
+* Version:         0.15
 */
 
 function react_app_shortcode_with_script() {
