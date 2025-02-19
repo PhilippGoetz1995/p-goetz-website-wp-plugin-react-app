@@ -144,8 +144,8 @@ export default function VerticalTimelineComponent() {
       loading: "lazy",
     },
     {
-      original: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_02.jpg",
-      thumbnail: "https://p-goetz.de/wp-content/uploads/2024/12/SAPGDP_02.jpg",
+      original: "https://p-goetz.de/wp-content/uploads/2025/02/SAPGDP_02.jpg",
+      thumbnail: "https://p-goetz.de/wp-content/uploads/2025/02/SAPGDP_02.jpg",
       loading: "lazy",
     },
     {
@@ -258,7 +258,7 @@ export default function VerticalTimelineComponent() {
     },
     {
       original:
-        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_02.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/02/RBBasement_02.jpg",
       thumbnail:
         "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_02.jpg",
       loading: "lazy",
@@ -275,9 +275,9 @@ export default function VerticalTimelineComponent() {
     },
     {
       original:
-        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_03.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/02/RBBasement_03.jpg",
       thumbnail:
-        "https://p-goetz.de/wp-content/uploads/2024/12/RBBasement_03.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/02/RBBasement_03.jpg",
       loading: "lazy",
     },
     {
