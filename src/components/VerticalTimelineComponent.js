@@ -610,11 +610,14 @@ export default function VerticalTimelineComponent() {
             </ul>
             <div className="containerLablesForSkills">
               <div className="labelDesign lableForSkills">AGILE WORK</div>
-              <div className="labelDesign lableForSkills">LEADERSHIP</div>
               <div className="labelDesign lableForSkills">TEAM MANAGEMENT</div>
               <div className="labelDesign lableForSkills">CO-INNOVATION</div>
               <div className="labelDesign lableForSkills">DATA ANALYTICS</div>
               <div className="labelDesign lableForSkills">CI/CD</div>
+              <div className="labelDesign lableForSkills">REACT</div>
+              <div className="labelDesign lableForSkills">IOS/ANDROID</div>
+              <div className="labelDesign lableForSkills">AWS</div>
+              <div className="labelDesign lableForSkills">CONTENTFUL</div>
             </div>
             {/* Gallery */}
             {/* I get via "el" the current element and save it then in the array of refferences/states */}
@@ -1087,11 +1090,14 @@ export default function VerticalTimelineComponent() {
             </ul>
             <div className="containerLablesForSkills">
               <div className="labelDesign lableForSkills">MIXED REALITY</div>
-              <div className="labelDesign lableForSkills">FAN ENGAGEMENT</div>
+              <div className="labelDesign lableForSkills">META QUEST</div>
               <div className="labelDesign lableForSkills">
                 INTERACTIVE STADIUM
               </div>
-              <div className="labelDesign lableForSkills">GAMEFICATION</div>
+              <div className="labelDesign lableForSkills">UNREAL</div>
+              <div className="labelDesign lableForSkills">REACT</div>
+              <div className="labelDesign lableForSkills">STAGE PRECISION</div>
+              <div className="labelDesign lableForSkills">AWS</div>
               <div className="labelDesign lableForSkills">AI</div>
             </div>
             {/* Gallery */}
@@ -1218,6 +1224,8 @@ export default function VerticalTimelineComponent() {
               <div className="labelDesign lableForSkills">AUTOMOTIVE</div>
               <div className="labelDesign lableForSkills">AI</div>
               <div className="labelDesign lableForSkills">INNOVATION</div>
+              <div className="labelDesign lableForSkills">UNITY</div>
+              <div className="labelDesign lableForSkills">VARJO</div>
             </div>
             {/* Gallery */}
             <ImageGallery
