@@ -124,10 +124,6 @@ export default function VerticalTimelineComponent() {
     // }
   };
 
-  const DEBUGFunction = (ref, open) => {
-    console.log(ref, open);
-  };
-
   // Disable the key left and right because it is interferring with other gallerys
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -737,6 +733,13 @@ export default function VerticalTimelineComponent() {
                 handleGallery("gallery_RBBasement", true);
               }}
               onSlide={() => handleGallery("gallery_RBBasement", false)}
+              renderFullscreenButton={(onClick, isFullscreen) => (
+                <AiOutlineExpand
+                  size={35}
+                  onClick={() => handleGallery("gallery_RBBasement", true)}
+                  className="galleryFullScreenIcon"
+                />
+              )}
             />
 
             {/* The lightboxState is initially not set therefore should be false if not already once open */}
@@ -842,6 +845,13 @@ export default function VerticalTimelineComponent() {
                 handleGallery("gallery_SXD", true);
               }}
               onSlide={() => handleGallery("gallery_SXD", false)}
+              renderFullscreenButton={(onClick, isFullscreen) => (
+                <AiOutlineExpand
+                  size={35}
+                  onClick={() => handleGallery("gallery_SXD", true)}
+                  className="galleryFullScreenIcon"
+                />
+              )}
             />
             {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
@@ -925,6 +935,13 @@ export default function VerticalTimelineComponent() {
                 handleGallery("gallery_DDX", true);
               }}
               onSlide={() => handleGallery("gallery_DDX", false)}
+              renderFullscreenButton={(onClick, isFullscreen) => (
+                <AiOutlineExpand
+                  size={35}
+                  onClick={() => handleGallery("gallery_DDX", true)}
+                  className="galleryFullScreenIcon"
+                />
+              )}
             />
             {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
@@ -1026,6 +1043,13 @@ export default function VerticalTimelineComponent() {
                 handleGallery("gallery_RBMixedReality", true);
               }}
               onSlide={() => handleGallery("gallery_RBMixedReality", false)}
+              renderFullscreenButton={(onClick, isFullscreen) => (
+                <AiOutlineExpand
+                  size={35}
+                  onClick={() => handleGallery("gallery_RBMixedReality", true)}
+                  className="galleryFullScreenIcon"
+                />
+              )}
             />
             {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
@@ -1129,6 +1153,13 @@ export default function VerticalTimelineComponent() {
                 handleGallery("gallery_BMW_MMR", true);
               }}
               onSlide={() => handleGallery("gallery_BMW_MMR", false)}
+              renderFullscreenButton={(onClick, isFullscreen) => (
+                <AiOutlineExpand
+                  size={35}
+                  onClick={() => handleGallery("gallery_BMW_MMR", true)}
+                  className="galleryFullScreenIcon"
+                />
+              )}
             />
             {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
@@ -1230,6 +1261,13 @@ export default function VerticalTimelineComponent() {
                 handleGallery("gallery_BMW_RN", true);
               }}
               onSlide={() => handleGallery("gallery_BMW_RN", false)}
+              renderFullscreenButton={(onClick, isFullscreen) => (
+                <AiOutlineExpand
+                  size={35}
+                  onClick={() => handleGallery("gallery_BMW_RN", true)}
+                  className="galleryFullScreenIcon"
+                />
+              )}
             />
             {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
@@ -1338,6 +1376,13 @@ export default function VerticalTimelineComponent() {
                 handleGallery("gallery_BMW_Visualizer", true);
               }}
               onSlide={() => handleGallery("gallery_BMW_Visualizer", false)}
+              renderFullscreenButton={(onClick, isFullscreen) => (
+                <AiOutlineExpand
+                  size={35}
+                  onClick={() => handleGallery("gallery_BMW_Visualizer", true)}
+                  className="galleryFullScreenIcon"
+                />
+              )}
             />
             {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
@@ -1440,6 +1485,13 @@ export default function VerticalTimelineComponent() {
                 handleGallery("gallery_Myfarmbox", true);
               }}
               onSlide={() => handleGallery("gallery_Myfarmbox", false)}
+              renderFullscreenButton={(onClick, isFullscreen) => (
+                <AiOutlineExpand
+                  size={35}
+                  onClick={() => handleGallery("gallery_Myfarmbox", true)}
+                  className="galleryFullScreenIcon"
+                />
+              )}
             />
             {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox
@@ -1539,6 +1591,13 @@ export default function VerticalTimelineComponent() {
                 handleGallery("gallery_PACINO", true);
               }}
               onSlide={() => handleGallery("gallery_PACINO", false)}
+              renderFullscreenButton={(onClick, isFullscreen) => (
+                <AiOutlineExpand
+                  size={35}
+                  onClick={() => handleGallery("gallery_PACINO", true)}
+                  className="galleryFullScreenIcon"
+                />
+              )}
             />
             {/* The lightboxState is initially not set therefore should be false if not already once open */}
             <Lightbox

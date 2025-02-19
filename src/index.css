@@ -6,7 +6,7 @@ body {
 .galleryFullScreenIcon {
   cursor: pointer;
   position: absolute;
-  margin-top: -40px;
-  right: 7px;
+  margin-top: -45px;
+  right: 10px;
   color: white;
 }
