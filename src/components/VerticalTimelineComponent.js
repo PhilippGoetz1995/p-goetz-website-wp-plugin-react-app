@@ -13,6 +13,8 @@ import { MdOutlineDesignServices } from "react-icons/md";
 
 import { IoAnalyticsSharp } from "react-icons/io5";
 
+import { AiOutlineExpand } from "react-icons/ai";
+
 import { useRef, useState, useEffect } from "react";
 
 import {
@@ -99,27 +101,31 @@ export default function VerticalTimelineComponent() {
       return newState;
     });
 
-    //Here i get the current slide and if it is a video i insert a video player
-    var imageGallerySlide = galleryRefs.current[
-      galleryRef
-    ].imageGallerySlideWrapper.current.querySelector(".image-gallery-slides")
-      .children[currentIndex];
+    // //Here i get the current slide and if it is a video i insert a video player
+    // var imageGallerySlide = galleryRefs.current[
+    //   galleryRef
+    // ].imageGallerySlideWrapper.current.querySelector(".image-gallery-slides")
+    //   .children[currentIndex];
 
-    //Execute only if there is a next slide
-    if (imageGallerySlide) {
-      // Check if there is a video wrapper inside
-      var videoBoolean = imageGallerySlide.querySelector(".video-wrapper");
-      var fullScreenButton = galleryRefs.current[
-        galleryRef
-      ].imageGallerySlideWrapper.current.querySelector(
-        ".image-gallery-fullscreen-button"
-      );
-      if (videoBoolean) {
-        fullScreenButton.style.display = "none";
-      } else {
-        fullScreenButton.style.display = "block";
-      }
-    }
+    // //Execute only if there is a next slide
+    // if (imageGallerySlide) {
+    //   // Check if there is a video wrapper inside
+    //   var videoBoolean = imageGallerySlide.querySelector(".video-wrapper");
+    //   var fullScreenButton = galleryRefs.current[
+    //     galleryRef
+    //   ].imageGallerySlideWrapper.current.querySelector(
+    //     ".image-gallery-fullscreen-button"
+    //   );
+    //   if (videoBoolean) {
+    //     fullScreenButton.style.display = "none";
+    //   } else {
+    //     fullScreenButton.style.display = "block";
+    //   }
+    // }
+  };
+
+  const DEBUGFunction = (ref, open) => {
+    console.log(ref, open);
   };
 
   // Disable the key left and right because it is interferring with other gallerys
@@ -616,6 +622,13 @@ export default function VerticalTimelineComponent() {
                 handleGallery("gallery_SAPGDP", true);
               }}
               onSlide={() => handleGallery("gallery_SAPGDP", false)}
+              renderFullscreenButton={(onClick, isFullscreen) => (
+                <AiOutlineExpand
+                  size={35}
+                  onClick={() => handleGallery("gallery_SAPGDP", true)}
+                  className="galleryFullScreenIcon"
+                />
+              )}
             />
 
             {/* The lightboxState is initially not set therefore should be false if not already once open */}

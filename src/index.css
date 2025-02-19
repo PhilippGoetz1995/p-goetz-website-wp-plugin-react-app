@@ -2,3 +2,11 @@ body {
   margin: 0px;
   font-family: "Poppins";
 }
+
+.galleryFullScreenIcon {
+  cursor: pointer;
+  position: absolute;
+  margin-top: -40px;
+  right: 7px;
+  color: white;
+}
