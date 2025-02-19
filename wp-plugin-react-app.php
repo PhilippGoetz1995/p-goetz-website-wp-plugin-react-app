@@ -52,6 +52,15 @@ function react_app_shortcode_with_script() {
 }
 add_shortcode('react_app', 'react_app_shortcode_with_script');
 
+// Add defer attribute to the React script
+function add_defer_to_react_script($tag, $handle) {
+    if ('react-app' === $handle) {
+        return str_replace(' src', ' defer src', $tag);
+    }
+    return $tag;
+}
+add_filter('script_loader_tag', 'add_defer_to_react_script', 10, 2);
+
 
 
 
