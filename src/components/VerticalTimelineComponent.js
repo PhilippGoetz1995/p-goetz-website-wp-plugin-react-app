@@ -730,6 +730,7 @@ export default function VerticalTimelineComponent() {
             <div className="containerLablesForSkills">
               <div className="labelDesign lableForSkills">ENTREPRENEURSHIP</div>
               <div className="labelDesign lableForSkills">SUSTAINABILITY</div>
+              <div className="labelDesign lableForSkills">AI & LLM</div>
               <div className="labelDesign lableForSkills">PROTOTYPING</div>
               <div className="labelDesign lableForSkills">STUDENT PROGRAM</div>
               <div className="labelDesign lableForSkills">COLLABORATION</div>
@@ -1304,7 +1305,7 @@ export default function VerticalTimelineComponent() {
             </div>
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
-              BMW M Race Track Data Analytics & Fan Experience
+              Race Track Data Analytics & Fan Experience
             </h3>
             <div
               className="labelDesign lableForJob"
