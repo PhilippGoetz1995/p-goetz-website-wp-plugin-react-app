@@ -523,7 +523,7 @@ export default function VerticalTimelineComponent() {
     <>
       <div
         className="content"
-        style={{ backgroundColor: "#2c3e50", width: "100%" }}
+        style={{ backgroundColor: "#08162c", width: "100%" }}
       >
         <VerticalTimeline>
           {/* SAP Garden Digital Eco System */}
