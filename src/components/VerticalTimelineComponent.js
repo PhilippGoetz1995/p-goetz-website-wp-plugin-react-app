@@ -1556,13 +1556,14 @@ export default function VerticalTimelineComponent() {
                 className="vertical-timeline-element-logo"
                 style={{
                   width: "100px",
+                  top: "10px",
                 }}
                 alt="Myfarmbox Logo"
               ></img>
             </div>
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
-              Myfarmbox.de Local Food E-Commerce
+              Local Food E-Commerce Startup
             </h3>
             <div
               className="labelDesign lableForJob"
@@ -1686,7 +1687,7 @@ export default function VerticalTimelineComponent() {
             </div>
             {/* Content Text */}
             <h3 className="vertical-timeline-element-title">
-              Sustainable Sunglasses
+              Sustainable Sunglasses Startup
             </h3>
             <div
               className="labelDesign lableForJob"

@@ -1,4 +1,4 @@
-/* BACKUP WORDPRESS STYLING STAND 18.02.2025 */
+/* BACKUP WORDPRESS STYLING STAND 20.02.2025 11:09 Uhr */
 
 #projects-section {
   padding-bottom: 0px !important;
@@ -28,21 +28,19 @@
   .vertical-timeline--two-columns .vertical-timeline-element-content {
     width: 46% !important;
   }
-}
 
-@media only screen and (min-width: 1170px) {
   .vertical-timeline--two-columns
     .vertical-timeline-element:nth-child(even)
     .vertical-timeline-element-content
     .vertical-timeline-element-date {
-    right: 115% !important;
+    right: 114% !important;
   }
 
   .vertical-timeline--two-columns
     .vertical-timeline-element:nth-child(odd)
     .vertical-timeline-element-content
     .vertical-timeline-element-date {
-    left: 115% !important;
+    left: 116% !important;
   }
 }
 
@@ -139,6 +137,10 @@ ul {
   height: 100%;
 }
 
+.galleryFullScreenIcon {
+  filter: drop-shadow(0 2px 2px #1a1a1a);
+}
+
 @media only screen and (max-width: 768px) {
   h3 {
     font-size: 18px;
@@ -166,12 +168,16 @@ ul {
     position: static !important;
   }
 
+  .image-gallery-icon {
+    padding: 0px 10px !important;
+  }
+
   .lableForJob {
     font-size: 9px;
   }
 
   .lableForSkills {
-    font-size: 9px;
+    font-size: 8px;
   }
 
   .vertical-timeline-element-content p {
