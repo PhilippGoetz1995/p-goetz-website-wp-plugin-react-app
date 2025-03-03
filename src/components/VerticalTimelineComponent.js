@@ -319,9 +319,9 @@ export default function VerticalTimelineComponent() {
   const gallery_RBMixedReality = [
     {
       original:
-        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_1.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/03/RB_MR_Game_1.jpg",
       thumbnail:
-        "https://p-goetz.de/wp-content/uploads/2025/02/RB_MR_Game_1.jpg",
+        "https://p-goetz.de/wp-content/uploads/2025/03/RB_MR_Game_1.jpg",
       loading: "lazy",
     },
     {
