@@ -33,11 +33,12 @@ This is a animated Timeline developed with React to be integrated on the p-goetz
 - **Technology**: React.js
 - **Styling**: simple CSS
 
-### Technical Flow
+## Technical Flow
 1. React App is build via GitHub Workflows
 2. Moved via GitHub Workflows then via FTP to Strato Server
 3. Within that Package is also a Wordpres Plugin Included
 
+<br>
 
 # 🚀 Key Features
 
@@ -47,6 +48,8 @@ Playground Application with:
 
 ## Roadmap
 - 🔜 Coming Soon: for now nothing on the Roadmap
+
+<br>
 
 # 🔧 How To Use
 
@@ -63,8 +66,7 @@ docker-compose -f docker-compose-prod.yml up
 
 ## Development
 
-
-
+<br>
 
 # 🤬 Hints to not cry everytime
 
@@ -87,6 +89,7 @@ Nginx Handles:
 
 - access django backend on stage only directly via port because the staticfiles are not collected and this would lead to problem with react development mode
 
+<br>
 
 # 📅 Version History
 
