@@ -25,6 +25,8 @@
 
 This is a animated Timeline developed with React to be integrated on the p-goetz.de Website as a scrollable CV.
 
+---
+
 # 🏗️ Architecture
 
 ## Frontend => React
