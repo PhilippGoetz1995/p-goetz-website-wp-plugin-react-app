@@ -1,74 +1,122 @@
-# Version
+<h1 align="center">
+  <br>
+  <a href="https://p-goetz.de/"><img src="https://p-goetz.de/wp-content/uploads/2025/04/20250404_P-Goetz_DEV_logo.png" alt="P-Goetz" width="200"></a>
+</h1>
 
-This is the Version 1.0.0
+<h4 align="center">📦 P-Goetz React Timeline</h4>
 
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://p-goetz.de/"><img src="https://img.shields.io/badge/Version-1.0.0-blue"></a>
+  <a href="https://p-goetz.de/"><img src="https://img.shields.io/badge/Author-Philipp_Goetz-yellow"></a>
+  <a href="https://p-goetz.de/"><img src="https://img.shields.io/badge/uptime-100%25-brightgreen"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</p>
 
-## Available Scripts
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#hints-to-not-cry-everytime">Hints</a>
+</p>
 
-In the project directory, you can run:
+<!-- Screenshot is optional -->
+<!-- ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif) -->
 
-### `npm start`
+This is a Playground Application 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🏗️ Architecture
+# Frontend => React
+- **Technology**: React.js
+- **Styling**: bootstrap
+# Backend => Django
+## STAGE -> using the build in django server
+## PROD -> using the gunicorn server
+# Webserver => nginx
+## STAGE -> is connnected with build in django server
+## PROD -> is connected to gunicorn server
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Technical Flow
+1. Frontend build process compiles React application
+2. Static files are served by Nginx
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 🚀 Key Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Playground Application with:
+1. 
+- ✅ REACT Playground
+- 🔜 Coming Soon: for now nothing on the Roadmap
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔧 How To Use
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Application is dockerized => Start Docker (Desktop)
+2. There is a STAGE and PROD env
 
-### `npm run eject`
+Start the STAGE Containers
+docker-compose -f docker-compose-stage.yml up
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Start the PROD Containers
+docker-compose -f docker-compose-prod.yml up
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔧 Development
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Editing python => use virtual env (venv)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🤬 Hints to not cry everytime
 
-### Code Splitting
+- ...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+TODO README
+- Extended the django backend structure with a "settings" folder with base, development and production settings
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Nginx Handles:
+/ → React frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+/admin/ → Django backend (via proxy)
 
-### Advanced Configuration
+/staticfiles/ → Django static assets
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+- django checks for commands that are within installed apps (for example createsu.py file for creating superuser on the fly)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- access django backend on stage only directly via port because the staticfiles are not collected and this would lead to problem with react development mode
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Version History
+
+<details>
+<summary><strong>v1.2.3</strong> – July 30, 2025</summary>
+
+- ✨ Added new dashboard layout  
+- 🐛 Fixed login redirect bug  
+- 🧪 Improved unit test coverage  
+- 🛠 Minor performance improvements
+
+</details>
+
+<details>
+<summary><strong>v1.2.2</strong> – June 20, 2025</summary>
+
+- 🐛 Fixed broken API endpoint  
+- 🔧 Updated dependencies  
+- 📄 Minor documentation changes
+
+</details>
+
+## Changelog
+
+### v1.2.3 – July 30, 2025
+- ✨ Added new dashboard layout  
+- 🐛 Fixed login redirect bug  
+- 🧪 Improved unit test coverage  
+- 🛠 Minor performance improvements
+
+### v1.2.2 – June 20, 2025
+- 🐛 Fixed broken API endpoint  
+- 🔧 Updated dependencies  
+- 📄 Minor documentation changes
