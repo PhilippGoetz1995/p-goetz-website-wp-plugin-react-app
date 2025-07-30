@@ -55,14 +55,7 @@ Playground Application with:
 
 ## Production
 
-1. Application is dockerized => Start Docker (Desktop)
-2. There is a STAGE and PROD env
-
-Start the STAGE Containers
-docker-compose -f docker-compose-stage.yml up
-
-Start the PROD Containers
-docker-compose -f docker-compose-prod.yml up
+Application is build during deployment process via GitHub Workflows and then integrated into Wordpress
 
 ## Development
 
@@ -71,23 +64,6 @@ docker-compose -f docker-compose-prod.yml up
 # 🤬 Hints to not cry everytime
 
 - ...
-
-
-TODO README
-- Extended the django backend structure with a "settings" folder with base, development and production settings
-
-
-Nginx Handles:
-/ → React frontend
-
-/admin/ → Django backend (via proxy)
-
-/staticfiles/ → Django static assets
-
-
-- django checks for commands that are within installed apps (for example createsu.py file for creating superuser on the fly)
-
-- access django backend on stage only directly via port because the staticfiles are not collected and this would lead to problem with react development mode
 
 <br>
 
