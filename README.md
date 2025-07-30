@@ -21,33 +21,34 @@
 <!-- Screenshot is optional -->
 <!-- ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif) -->
 
-This is a Playground Application 
+---
 
-## 🏗️ Architecture
-# Frontend => React
+This is a animated Timeline developed with React to be integrated on the p-goetz.de Website as a scrollable CV.
+
+# 🏗️ Architecture
+
+## Frontend => React
 - **Technology**: React.js
-- **Styling**: bootstrap
-# Backend => Django
-## STAGE -> using the build in django server
-## PROD -> using the gunicorn server
-# Webserver => nginx
-## STAGE -> is connnected with build in django server
-## PROD -> is connected to gunicorn server
-
+- **Styling**: simple CSS
 
 ### Technical Flow
-1. Frontend build process compiles React application
-2. Static files are served by Nginx
+1. React App is build via GitHub Workflows
+2. Moved via GitHub Workflows then via FTP to Strato Server
+3. Within that Package is also a Wordpres Plugin Included
 
 
 ## 🚀 Key Features
 
 Playground Application with:
 1. 
-- ✅ REACT Playground
+- ✅ REACT Timeline as animated CV
+
+### Roadmap
 - 🔜 Coming Soon: for now nothing on the Roadmap
 
 ## 🔧 How To Use
+
+### Production
 
 1. Application is dockerized => Start Docker (Desktop)
 2. There is a STAGE and PROD env
@@ -58,10 +59,8 @@ docker-compose -f docker-compose-stage.yml up
 Start the PROD Containers
 docker-compose -f docker-compose-prod.yml up
 
+### Development
 
-## 🔧 Development
-
-- Editing python => use virtual env (venv)
 
 
 
@@ -90,33 +89,16 @@ Nginx Handles:
 ## Version History
 
 <details>
-<summary><strong>v1.2.3</strong> – July 30, 2025</summary>
+<summary><strong>v1.0.0</strong> – 01.08.2025</summary>
 
-- ✨ Added new dashboard layout  
-- 🐛 Fixed login redirect bug  
-- 🧪 Improved unit test coverage  
-- 🛠 Minor performance improvements
+- ✨ Updated Readme file  
+- 🛠 Cleaned up folders and removed old files
 
 </details>
 
 <details>
-<summary><strong>v1.2.2</strong> – June 20, 2025</summary>
+<summary><strong>v0.0.1</strong> – 30.07.2025</summary>
 
-- 🐛 Fixed broken API endpoint  
-- 🔧 Updated dependencies  
-- 📄 Minor documentation changes
+- 🔧 Inital Deployment
 
 </details>
-
-## Changelog
-
-### v1.2.3 – July 30, 2025
-- ✨ Added new dashboard layout  
-- 🐛 Fixed login redirect bug  
-- 🧪 Improved unit test coverage  
-- 🛠 Minor performance improvements
-
-### v1.2.2 – June 20, 2025
-- 🐛 Fixed broken API endpoint  
-- 🔧 Updated dependencies  
-- 📄 Minor documentation changes
