@@ -39,18 +39,18 @@ This is a animated Timeline developed with React to be integrated on the p-goetz
 3. Within that Package is also a Wordpres Plugin Included
 
 
-## 🚀 Key Features
+# 🚀 Key Features
 
 Playground Application with:
 1. 
 - ✅ REACT Timeline as animated CV
 
-### Roadmap
+## Roadmap
 - 🔜 Coming Soon: for now nothing on the Roadmap
 
-## 🔧 How To Use
+# 🔧 How To Use
 
-### Production
+## Production
 
 1. Application is dockerized => Start Docker (Desktop)
 2. There is a STAGE and PROD env
@@ -61,12 +61,12 @@ docker-compose -f docker-compose-stage.yml up
 Start the PROD Containers
 docker-compose -f docker-compose-prod.yml up
 
-### Development
+## Development
 
 
 
 
-## 🤬 Hints to not cry everytime
+# 🤬 Hints to not cry everytime
 
 - ...
 
@@ -88,7 +88,7 @@ Nginx Handles:
 - access django backend on stage only directly via port because the staticfiles are not collected and this would lead to problem with react development mode
 
 
-## Version History
+# 📅 Version History
 
 <details>
 <summary><strong>v1.0.0</strong> – 01.08.2025</summary>
