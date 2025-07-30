@@ -6,7 +6,7 @@
 <h4 align="center">📦 P-Goetz React Timeline</h4>
 
 <p align="center">
-  <a href="https://p-goetz.de/"><img src="https://img.shields.io/badge/Version-1.0.0-blue"></a>
+  <a href="https://p-goetz.de/"><img src="https://img.shields.io/badge/Version-1.0.1-blue"></a>
   <a href="https://p-goetz.de/"><img src="https://img.shields.io/badge/Author-Philipp_Goetz-yellow"></a>
   <a href="https://p-goetz.de/"><img src="https://img.shields.io/badge/uptime-100%25-brightgreen"></a>
 
@@ -42,11 +42,9 @@ This is a animated Timeline developed with React to be integrated on the p-goetz
 
 # 🚀 Key Features
 
-Playground Application with:
-1. 
 - ✅ REACT Timeline as animated CV
 
-## Roadmap
+# 🧪 Roadmap
 - 🔜 Coming Soon: for now nothing on the Roadmap
 
 <br>
@@ -70,7 +68,7 @@ Application is build during deployment process via GitHub Workflows and then int
 # 📅 Version History
 
 <details>
-<summary><strong>v1.0.0</strong> – 01.08.2025</summary>
+<summary><strong>v1.0.1</strong> – 01.08.2025</summary>
 
 - ✨ Updated Readme file  
 - 🛠 Cleaned up folders and removed old files
